@@ -1,0 +1,5 @@
+.container__about {
+    background-color: var(--backgroung--secondary);
+    height: 100vh;
+    position: relative;
+}

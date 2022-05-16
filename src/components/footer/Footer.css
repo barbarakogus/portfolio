@@ -1,0 +1,33 @@
+.footer {
+    background-color: rgba(36,36,36,0);
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    height: 4rem;
+    justify-content: space-between;
+    left: 0;
+    position: fixed;
+    right: 0;
+    text-align: right;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.container--copyright {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: 3rem;
+}
+
+.footer--icon {
+    height: 24px;
+    margin-right: 3rem;
+    padding: 1rem 0;
+    width: 24px;
+}
+
+.footer--text {
+    color: var(--text-color);
+    font-weight: 300;
+}
