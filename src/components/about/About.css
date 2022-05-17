@@ -1,5 +1,45 @@
 .container__about {
+    align-items: center;
     background-color: var(--backgroung--secondary);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     height: 100vh;
     position: relative;
+}
+
+.description__about {
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.8rem;
+    width: 35%;
+}
+
+.description__about--line-left {
+    margin-left: 0;
+    width: 15%;
+}
+
+.description__about--line-left + p {
+    padding: 1rem;
+}
+
+.description__about--line-right {
+    margin-right: 0;
+    width: 15%;
+}
+
+.content__about {
+    width: 30%;
+}
+
+.content__about--title {
+    color: var(--contrast-area);
+    font-size: 22px;
+}
+
+.content__about--icon {
+    margin-top: 2rem;
+    margin-right: 5rem;
 }

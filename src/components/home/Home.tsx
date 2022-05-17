@@ -3,7 +3,7 @@ import profileImg from '../../assets/img/profile.png';
 
 function Home() {
     return (
-        <div className="container__home">
+        <div id='homePage' className="container__home">
             <section className='container__home--content'>
                 <h1 className='content--text'>Welcome to my website, <br />
                 I'm <span  className='content--text--title'>Bárbara Kógus</span> <br />

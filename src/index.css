@@ -26,6 +26,7 @@ body {
 :root {
   --backgroung--primary: #3a3d41 ;
   --backgroung--secondary: #797D7F;
+  --btn-dowloadCV-hover: #724C68;
   --contrast-area: #e59ad1;
   --span--text: #ca221f;
   --text-color: #ffffff;

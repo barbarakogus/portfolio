@@ -1,0 +1,118 @@
+.container__resume {
+    background-color: var(--backgroung--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+.container__resume--timeline {
+    align-items: center;
+    display: flex;
+    
+    padding-top: 6rem;
+    width: 80%;
+}
+.container__resume--arrow {
+    margin-right: 1rem;
+}
+.resume--title {
+    font-weight: 400;
+}
+.resume--description {
+    font-weight: 200;
+}
+.resume--date {
+    font-weight: 200;
+}
+.container__resume--timeline ul {
+    padding: 250px 0;
+    transition: all 1s;
+}
+.container--timeline-start {
+    background: var(--contrast-area);
+    border-radius: 60%;
+    content: '';
+    height: 12px;
+    margin-right: .1rem;
+    margin-top: 1.2rem;
+    transform: translateY(-50%);
+    width: 12px;
+}
+.container__resume--timeline ul li {
+    position: relative;
+    display: inline-block;
+    line-height: 1.5rem;
+    list-style-type: none;
+    width: 160px;
+    height: 3px;
+    background: #fff;
+}
+.container__resume--timeline ul li:not(:first-child) {
+    margin-left: 14px;
+}
+.container__resume--timeline ul li:not(:last-child)::after {
+    background: var(--contrast-area);
+    border-radius: 60%;
+    bottom: 0;
+    content: '';
+    height: 12px;
+    left: calc(100% + 1px);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+}
+.container__resume--timeline ul li div {
+    background: var(--backgroung--secondary);
+    color: var(--text-color);
+    padding: .8rem;
+    position: absolute;
+    width: 220px;
+    white-space: normal;
+}
+.container__resume--timeline ul li div::before {
+    border-style: solid;
+    content: '';
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    width: 0;
+}
+.container__resume--timeline ul li:nth-child(odd) div {
+    border-radius: 1rem 2rem 1rem 0rem;
+    top: -16px;
+    transform: translateY(-100%);
+}
+.container__resume--timeline ul li:nth-child(odd) div::before {
+    top: 100%;
+    border-width: 8px 8px 0 0;
+    border-color: var(--backgroung--secondary) transparent transparent transparent;
+}
+.container__resume--timeline ul li:nth-child(even) div {
+    border-radius: 0rem 1rem 2rem 1rem;
+    top: calc(100% + 16px);
+}
+.container__resume--timeline ul li:nth-child(even) div::before {
+    top: -8px;
+    border-width: 8px 0 0 8px;
+    border-color: transparent transparent transparent var(--backgroung--secondary);
+}
+.container__resume--btn-dowloadCV {
+    background-color: var(--contrast-area);
+    border: none;
+    border-radius: 1.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 18px;
+    padding: 1rem;
+    right: 0;
+    transition: 2s all;
+    width: 20%;
+}
+
+.container__resume--btn-dowloadCV:hover {
+    background-color: var(--btn-dowloadCV-hover);
+    transform: scale(1.02);
+}
