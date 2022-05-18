@@ -7,17 +7,9 @@ function Header() {
             <div className="header">
                 <h1 className='hearder--title'>Bárbara Kógus</h1>
                 <nav className='header__navigation'>
-                    <ul>
-                        <li>
-                            <Link className='header__anchor' to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link className='header__anchor' to="about">About</Link>
-                        </li>
-                        <li>
-                            <Link className='header__anchor' to="resume">Resume</Link>
-                        </li>
-                    </ul>
+                    <Link className='header__anchor' to="/">Home</Link>
+                    <Link className='header__anchor' to="about">About</Link>
+                    <Link className='header__anchor' to="resume">Resume</Link>
                     {/* <a href='#homePage' className='header__anchor'>Home</a>
                     <a href='#aboutPage' className='header__anchor'>About</a>
                     <a href='#resumePage' className='header__anchor'>Resume</a>
