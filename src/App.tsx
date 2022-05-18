@@ -1,3 +1,4 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/header/Header';
 import Pagination from './components/pagination/Pagination';
 import Home from './components/home/Home';
@@ -8,14 +9,20 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Pagination />
-      <Home />
-      <About />
-      <Resume />
-      <Footer />
-    </div>
+
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <Pagination />
+        
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='about' element={<About />} />
+          <Route path='resume' element={<Resume />} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
