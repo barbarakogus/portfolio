@@ -26,7 +26,8 @@ export function useLocation() {
     const [{ pathname, search, hash }, setLocation] = useState(getCurrentLocation())
 
     useEffect(() => {
-        return () => window.addEventListener('popstate', handleChange)
+        window.addEventListener('popstate', handleChange)
+        return () => window.removeEventListener('popstate', handleChange)
     }, [])
 
     // @ts-ignore
