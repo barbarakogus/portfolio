@@ -35,7 +35,7 @@
 }
 
 .content__about--title {
-    color: var(--contrast-area);
+    color: red;
     font-size: 22px;
 }
 
