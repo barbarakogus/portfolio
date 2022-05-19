@@ -48,9 +48,9 @@ function Resume() {
 
     return (
         <div id='resumepage' className="container__resume">
-            <div ref={ref} className='container__resume--timeline'>
+            <div className='container__resume--timeline'>
                 <img src="https://img.icons8.com/carbon-copy/100/ffffff/chevron-right.png" />
-                <span className='container--timeline-start'></span>
+                <span ref={ref} className='container--timeline-start'></span>
                 <ul>
                     {resumes.map((resume, key) =>
                         <li key={key}>

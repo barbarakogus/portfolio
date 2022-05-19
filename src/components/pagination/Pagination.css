@@ -5,9 +5,10 @@
     z-index: 1;
 }
 
-.pagination__list {
+.pagination__list--item {
     color: var(--text-color);
     font-size: 2rem;
     margin-top: 2.5rem;
 }
+
 

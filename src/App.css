@@ -1,1 +1,7 @@
-
+.active {
+    color: var(--contrast-area);
+    font-weight: 600;
+    opacity: 1;
+    transform: scale(1);
+    transition: all .4s ease;
+}
