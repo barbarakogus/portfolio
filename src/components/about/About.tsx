@@ -24,10 +24,13 @@ function About() {
         <p className='content__about--title'>Technologies</p>
         <img className='content__about--icon' src="https://img.icons8.com/color/48/000000/javascript--v1.png" />
         <img className='content__about--icon' src="https://img.icons8.com/color/48/000000/typescript.png" />
+        <img className='content__about--icon' src="https://img.icons8.com/color/48/000000/nodejs.png" />
         <img className='content__about--icon' src="https://img.icons8.com/color/48/000000/react-native.png" />
         <img className='content__about--icon' src="https://img.icons8.com/color/48/000000/redux.png" />
         <img className='content__about--icon' src="https://img.icons8.com/color/48/000000/kotlin.png" />
         <img className='content__about--icon' src="https://img.icons8.com/color/48/000000/android-os.png" />
+        <img className='content__about--icon' src="https://img.icons8.com/color/48/000000/mongodb.png" />
+        <img className='content__about--icon' src="https://img.icons8.com/color/48/000000/postgreesql.png" />
       </section>
     </div>
   );
