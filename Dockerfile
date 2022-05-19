@@ -1,8 +1,14 @@
-FROM node:12.16.3-alpine as build
+FROM node:16.11.0-alpine as build
 
 WORKDIR /app
+ENV PATH /app/node_modules/.bin:$PATH
+COPY ./package.json /app/
+COPY ./package-lock.json /app/
+RUN npm install
 
-COPY . ./
+COPY . /app
+
+RUN npm run build
 
 # ---
 FROM fholzer/nginx-brotli:v1.12.2
