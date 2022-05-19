@@ -2,7 +2,7 @@ import './About.css';
 
 function About() {
   return (
-    <div id='aboutPage' className="container__about">
+    <div id='aboutpage' className="container__about">
       <section className='description__about'>
         <hr className='description__about--line-left'></hr>
         <p>Lorem ipsum dolor sit amet. A repudiandae quos est nobis ipsum et saepe nobis. Qui exercitationem facere est internos voluptates aut quam consequatur quo nulla repellat qui vero velit qui dolorem omnis. Et quos voluptatibus sit dolor distinctio et laboriosam autem ut corporis assumenda qui consequuntur facere 33 dolorem cumque?</p>
