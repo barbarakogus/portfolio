@@ -1,4 +1,6 @@
 import './Resume.css';
+import { useEffect, useRef } from 'react';
+import useOnScreen from '../../hooks/useOnScreen';
 
 const resumes: Resume[] = [
     {
@@ -34,13 +36,23 @@ const resumes: Resume[] = [
 ]
 
 function Resume() {
+
+    const ref = useRef() as React.MutableRefObject<HTMLDivElement>
+    const isVisible = useOnScreen(ref);
+
+    useEffect(() => {
+        if (isVisible) {
+            window.location.hash = '#resumepage'
+        }
+    }, [isVisible]);
+
     return (
         <div id='resumepage' className="container__resume">
-            <div className='container__resume--timeline'>
+            <div ref={ref} className='container__resume--timeline'>
                 <img src="https://img.icons8.com/carbon-copy/100/ffffff/chevron-right.png" />
                 <span className='container--timeline-start'></span>
                 <ul>
-                    {resumes.map((resume, key) => 
+                    {resumes.map((resume, key) =>
                         <li key={key}>
                             <div>
                                 <h3 className='resume--title'>{resume.title}</h3>
@@ -51,7 +63,7 @@ function Resume() {
                     )}
                 </ul>
             </div>
-            <button className='container__resume--btn-dowloadCV'>Dowload Resume</button>
+            <a href='https://storage.googleapis.com/portfolio_bk/cv_barbaraKogus_2022.pdf' className='container__resume--btn-dowloadCV' download target='_blank'>Dowload Resume</a>
         </div>
     );
 }

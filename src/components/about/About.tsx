@@ -1,9 +1,21 @@
 import './About.css';
+import { useEffect, useRef } from 'react';
+import useOnScreen from '../../hooks/useOnScreen';
 
 function About() {
+
+  const ref = useRef() as React.MutableRefObject<HTMLDivElement>
+  const isVisible = useOnScreen(ref);
+
+  useEffect(() => {
+    if (isVisible) {
+      window.location.hash = '#aboutpage'
+    }
+  }, [isVisible]);
+
   return (
     <div id='aboutpage' className="container__about">
-      <section className='description__about'>
+      <section ref={ref} className='description__about'>
         <hr className='description__about--line-left'></hr>
         <p>Lorem ipsum dolor sit amet. A repudiandae quos est nobis ipsum et saepe nobis. Qui exercitationem facere est internos voluptates aut quam consequatur quo nulla repellat qui vero velit qui dolorem omnis. Et quos voluptatibus sit dolor distinctio et laboriosam autem ut corporis assumenda qui consequuntur facere 33 dolorem cumque?</p>
         <hr className='description__about--line-right'></hr>

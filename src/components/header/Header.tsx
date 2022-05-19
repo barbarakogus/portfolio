@@ -1,6 +1,15 @@
+import { useEffect } from 'react';
 import './Header.css';
+import { useLocation } from '../../hooks/useLocation';
 
 function Header() {
+
+    const location = useLocation();
+
+    useEffect(() => {
+        console.log(location);
+    }, [location])
+
     return (
         <>
             <div className="header">

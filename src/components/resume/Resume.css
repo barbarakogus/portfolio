@@ -108,6 +108,8 @@
     font-size: 18px;
     padding: 1rem;
     right: 0;
+    text-align: center;
+    text-decoration: none;
     transition: 2s all;
     width: 20%;
 }
