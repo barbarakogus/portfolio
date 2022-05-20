@@ -1,0 +1,27 @@
+.container__portfolio {
+    background-color: var(--backgroung--secondary);
+    height: auto;
+    position: relative;
+}
+
+.container__portfolio--title {
+    color: var(--text-color);
+    font-size: 32px;
+    margin: 0 auto;
+    padding-top: 6rem;
+    width: 80%;
+}
+
+.container__portfolio--line {
+    margin-left: 12rem;
+    width: 10.5%;
+}
+
+.container__portfolio__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 1.5rem auto 0 auto;
+    padding-bottom: 2rem;
+    width: 80%;
+}

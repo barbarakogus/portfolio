@@ -3,6 +3,7 @@ import Pagination from './components/pagination/Pagination';
 import Home from './components/home/Home';
 import About from './components/about/About';
 import Resume from './components/resume/Resume';
+import Portfolio from './components/portfolio/Portfolio';
 import Footer from './components/footer/Footer';
 import './App.css';
 
@@ -15,6 +16,7 @@ function App() {
       <Home />
       <About />
       <Resume />
+      <Portfolio />
       <Footer />
     </div>
   );

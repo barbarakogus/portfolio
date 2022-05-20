@@ -1,0 +1,59 @@
+.container__cardPortfolio {
+    background-color: var(--backgroung--primary);
+    border-radius: 1.8rem;
+    color: var(--text-color);
+    margin-top: 2rem;
+    width: 333px; 
+}
+
+.container__cardPortfolio--title {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 1rem;
+}
+
+.container__cardPortfolio--description {
+    font-weight: 300;
+    line-height: 1rem;
+    padding: 0 1rem;
+}
+
+.container__cardPortfolio--technologies {
+    font-weight: 400;
+    padding: .8rem 1rem;
+}
+
+.container__cardPortfolio--img {
+    padding: 1rem;
+    width: 300px;
+}
+
+.cardPortfolio--anchor-left{
+    background-color: var(--contrast-area);
+    border-radius: 0rem 0rem 0rem 1.8rem;
+    color: var(--text-color);
+    display: inline-block;
+    padding: .8rem .6rem;
+    text-align: center;
+    text-decoration: none;
+    width: 44.22%;
+}
+
+.cardPortfolio--anchor-left:hover {
+    background-color: var(--btn-hover);
+}
+
+.cardPortfolio--anchor-right{
+    background-color: var(--contrast-area);
+    border-radius: 0rem 0rem 1.8rem 0rem;
+    color: var(--text-color);
+    display: inline-block;
+    padding: .8rem 0.6rem;
+    text-align: center;
+    text-decoration: none;
+    width: 44.22%;
+}
+
+.cardPortfolio--anchor-right:hover {
+    background-color: var(--btn-hover);
+}

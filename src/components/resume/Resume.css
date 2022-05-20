@@ -1,16 +1,28 @@
 .container__resume {
+    align-items: center;
     background-color: var(--backgroung--primary);
     display: flex;
     flex-direction: column;
-    align-items: center;
     height: 100vh;
     position: relative;
 }
+.container__resume--title {
+    color: var(--text-color);
+    font-size: 32px;
+    margin: 0 auto;
+    padding-top: 6rem;
+    width: 80%;
+}
+
+.description__resume--line {
+    margin-left: 12rem;
+    width: 6.5%;
+}
+
 .container__resume--timeline {
     align-items: center;
     display: flex;
-    
-    padding-top: 6rem;
+    margin: 0 auto;
     width: 80%;
 }
 .container__resume--arrow {
@@ -110,11 +122,11 @@
     right: 0;
     text-align: center;
     text-decoration: none;
-    transition: 2s all;
+    transition: 1s all;
     width: 20%;
 }
 
 .container__resume--btn-dowloadCV:hover {
-    background-color: var(--btn-dowloadCV-hover);
+    background-color: var(--btn-hover);
     transform: scale(1.02);
 }
