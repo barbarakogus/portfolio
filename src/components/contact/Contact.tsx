@@ -14,10 +14,10 @@ function Contact() {
     }, [isVisible]);
 
     return (
-        <div id='aboutpage' ref={ref} className="container__contact">
+        <div id='aboutpage' className="container__contact">
             <h2 className="container__contact--title">Contact</h2>
             <hr className='container__contact--line'></hr>
-            <h4 className='container__contact--introduction'>Hi, did you like what you've seen so far?! I hope so, then let's talk!</h4>
+            <h4 ref={ref} className='container__contact--introduction'>Hi, did you like what you've seen so far?! I hope so, then let's talk!</h4>
             <div className='container__contact--info'>
                 <address>
                     <p><span>Stockholm</span>, SE </p><br />
