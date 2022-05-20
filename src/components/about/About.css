@@ -13,6 +13,11 @@
     width: 80%;
 }
 
+.container__about--line {
+    margin-left: 12rem;
+    width: 5%;
+}
+
 .container__about--content {
     display: flex;
     flex-direction: row;
@@ -26,11 +31,6 @@
     font-weight: 300;
     line-height: 2rem;
     width: 35%;
-}
-
-.description__about--line {
-    margin-left: 12rem;
-    width: 5%;
 }
 
 .description__about > p {

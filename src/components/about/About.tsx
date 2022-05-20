@@ -16,7 +16,7 @@ function About() {
   return (
     <div id='aboutpage' className="container__about" >
       <h2 className="container__about--title">About</h2>
-      <hr className='description__about--line'></hr>
+      <hr className='container__about--line'></hr>
       <div className="container__about--content">
         <section ref={ref} className='description__about'>
           <p>Lorem ipsum dolor sit amet. A repudiandae quos est nobis ipsum et saepe nobis. Qui exercitationem facere est internos voluptates aut quam consequatur quo nulla repellat qui vero velit qui dolorem omnis. Et quos voluptatibus sit dolor distinctio et laboriosam autem ut corporis assumenda qui consequuntur facere 33 dolorem cumque?</p>

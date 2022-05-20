@@ -49,7 +49,7 @@ function Resume() {
     return (
         <div id='resumepage' className="container__resume">
             <h2 className="container__resume--title">Resume</h2>
-            <hr className='description__resume--line'></hr>
+            <hr className='container__resume--line'></hr>
             <div className='container__resume--timeline'>
                 <img src="https://img.icons8.com/carbon-copy/100/ffffff/chevron-right.png" />
                 <span ref={ref} className='container--timeline-start'></span>
