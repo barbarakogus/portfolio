@@ -8,7 +8,7 @@ const projects: Project[] = [
         title: 'Boardkut',
         description: 'Hackaday Salt project - App to manipulate data about boardgames.',
         technologies: 'React - Redux - Docker - PostGres',
-        img: 'https://storage.cloud.google.com/portfolio_bk/images/boardkut.png',
+        img: 'https://storage.googleapis.com/portfolio_bk/images/boardkut.png',
         gitLink: 'https://github.com/barbarakogus/boardkut_frontend',
         projectLink: 'https://boardkut.herokuapp.com/'
     },
@@ -16,7 +16,7 @@ const projects: Project[] = [
         title: 'Boardkut',
         description: 'Hackaday Salt project - App to manipulate data about boardgames.',
         technologies: 'React - Redux - Docker - PostGres',
-        img: 'https://storage.cloud.google.com/portfolio_bk/images/boardkut.png',
+        img: 'https://storage.googleapis.com/portfolio_bk/images/boardkut.png',
         gitLink: 'https://github.com/barbarakogus/boardkut_frontend',
         projectLink: 'https://boardkut.herokuapp.com/'
     },
@@ -24,7 +24,7 @@ const projects: Project[] = [
         title: 'Boardkut',
         description: 'Hackaday Salt project - App to manipulate data about boardgames.',
         technologies: 'React - Redux - Docker - PostGres',
-        img: 'https://storage.cloud.google.com/portfolio_bk/images/boardkut.png',
+        img: 'https://storage.googleapis.com/portfolio_bk/images/boardkut.png',
         gitLink: 'https://github.com/barbarakogus/boardkut_frontend',
         projectLink: 'https://boardkut.herokuapp.com/'
     },
@@ -32,7 +32,7 @@ const projects: Project[] = [
         title: 'Boardkut',
         description: 'Hackaday Salt project - App to manipulate data about boardgames.',
         technologies: 'React - Redux - Docker - PostGres',
-        img: 'https://storage.cloud.google.com/portfolio_bk/images/boardkut.png',
+        img: 'https://storage.googleapis.com/portfolio_bk/images/boardkut.png',
         gitLink: 'https://github.com/barbarakogus/boardkut_frontend',
         projectLink: 'https://boardkut.herokuapp.com/'
     },
