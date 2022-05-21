@@ -29,9 +29,9 @@ function Contact() {
                         <input className='container__form__input' placeholder='Name' name='name' type="text" required></input>
                         <input className='container__form__input' placeholder='Subject (Optional)' name='subject' type="text"></input>
                     </div>
-                    <input className='container__form__input' placeholder='Email' name='email' type="email"></input>
-                    <textarea cols={40} rows={6} className="container__form__input--textarea" placeholder='Message' name="mensagem" maxLength={50}></textarea>
-                    <button>Contact me</button>
+                    <input className='container__form__input--email' placeholder='Email' name='email' type="email"></input>
+                    <textarea cols={40} rows={6} className="container__form__input--textarea" placeholder='Message' name="mensagem"  /*maxLength={50}*/></textarea>
+                    <button className='container__form__input--btn'>Contact me</button>
                 </form>
             </div>
         </div>

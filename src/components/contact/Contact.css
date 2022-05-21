@@ -18,31 +18,31 @@
 }
 
 .container__contact--introduction {
-    color: var(--text-color); 
+    color: var(--text-color);
     font-size: 22px;
     font-weight: 300;
     margin: 0 auto;
     padding-top: 2rem;
-    width: 80%;  
+    width: 80%;
 }
 
 .container__contact--info {
     display: flex;
+    color: var(--text-color);
     font-size: 26px;
     font-weight: 300;
     justify-content: space-around;
     margin: 0 auto;
     padding: 4rem 0rem;
-    color: var(--text-color);
-    width: 80%; 
+    width: 80%;
 }
 
-address > p {
+address>p {
     font-size: 30px;
     font-weight: 400;
 }
 
-p > span {
+p>span {
     color: var(--contrast-area);
     font-weight: bold;
 }
@@ -56,14 +56,70 @@ p > span {
 .container__contact__form {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 450px;
+}
+
+.container__contact__form>div {
+    display: flex;
+    justify-content: space-between;
 }
 
 .container__form__input {
     background-color: var(--backgroung--secondary);
     border: none;
+    border-radius: .8rem;
+    box-shadow: 0 0 2.08333rem rgb(0 0 0 / 50%);
     color: var(--text-color);
-    padding: .5rem;
+    padding: .7rem 1rem;
+    width: 41%;
+}
+
+.container__form__input--email {
+    background-color: var(--backgroung--secondary);
+    border: none;
+    border-radius: .8rem;
+    box-shadow: 0 0 2.08333rem rgb(0 0 0 / 50%);
+    color: var(--text-color);
+    padding: .7rem 1rem;
     margin-top: 1rem;
-    
+}
+
+.container__form__input--textarea {
+    background-color: var(--backgroung--secondary);
+    border: none;
+    border-radius: .8rem;
+    box-shadow: 0 0 2.08333rem rgb(0 0 0 / 50%);
+    color: var(--text-color);
+    margin-top: 1rem;
+    padding: .7rem 1rem;
+}
+
+::placeholder {
+    color: var(--text-color);
+    opacity: 1;
+}
+
+*:focus::placeholder {
+    color: transparent;
+}
+
+*:focus {
+    outline-style: none;
+}
+
+.container__form__input--btn {
+    background-color: var(--contrast-area);
+    border: none;
+    border-radius: 1.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 1.5rem;
+    padding: .7rem;
+    transition: 1s all;
+    width: 50%;
+}
+
+.container__form__input--btn:hover {
+    background-color: var(--btn-hover);
 }
