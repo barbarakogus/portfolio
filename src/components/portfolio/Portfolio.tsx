@@ -51,9 +51,9 @@ function Portfolio() {
 
     return (
         <div id='portfoliopage' className="container__portfolio">
-            <h2 className="container__portfolio--title">My projects</h2>
+            <h2 ref={ref} className="container__portfolio--title">My projects</h2>
             <hr className='container__portfolio--line'></hr>
-            <div ref={ref} className="container__portfolio__cards">
+            <div className="container__portfolio__cards">
                 {projects.map((project, key) =>
                     <CardPortfolio key={key} project={project} />
                 )}
