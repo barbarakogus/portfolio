@@ -31,3 +31,16 @@
     color: var(--text-color);
     font-weight: 300;
 }
+
+@media screen and (max-width:768px) {
+    .footer {
+        margin: 0 auto;
+        width: 85%;
+    }
+    .container--copyright {
+        margin-left: 0rem;
+    }
+    .footer--icon {
+        margin-right: 1rem;
+    }
+}

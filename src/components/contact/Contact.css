@@ -123,3 +123,35 @@ p>span {
 .container__form__input--btn:hover {
     background-color: var(--btn-hover);
 }
+
+@media screen and (max-width:768px) {
+    .container__contact--title {
+        width: 85%;
+    }
+
+    .container__contact--line {
+        margin-left: 3.5rem;
+        width: 30%;
+    }
+
+    .container__contact--introduction {
+        line-height: 2rem;
+        width: 85%;
+    }
+
+    .container__contact--info {
+        flex-direction: column;
+        padding: 2rem 0 3rem 0;
+        width: 85%;
+    }
+
+    .container__contact__form {
+        width: 100%;
+    }
+
+    .container__contact__form>div {
+        flex-direction: column;
+        height: 5.5rem;
+        margin-top: 2rem;
+    }
+}

@@ -14,7 +14,7 @@ function Contact() {
     }, [isVisible]);
 
     return (
-        <div id='aboutpage' className="container__contact">
+        <div id='contactpage' className="container__contact">
             <h2 className="container__contact--title">Contact</h2>
             <hr className='container__contact--line'></hr>
             <h4 ref={ref} className='container__contact--introduction'>Hi, did you like what you've seen so far?! I hope so, then let's talk!</h4>
