@@ -58,8 +58,7 @@
 
 @media screen and (max-width:768px) {
     .container__about--title {
-        padding-top: 5rem;
-        width: 80%;
+        width: 85%;
     }
 
     .container__about--line {
@@ -75,15 +74,16 @@
 
     .description__about {
         line-height: 1.8rem;
-    }
-
-    .description__about {
-        text-align: center;
+        text-align: start;
         width: 100%;
     }
 
+    .description__about > p {
+        padding: 0rem;
+    }
+
     .content__about {
-        margin-top: 1.3rem;
+        margin-top: 2.5rem;
         width: 100%;
     }
 

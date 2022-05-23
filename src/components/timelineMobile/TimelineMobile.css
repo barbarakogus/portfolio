@@ -1,0 +1,18 @@
+.container__timelineMobile {
+    background-color: aqua;
+}
+/* 
+.container__resume--timeline {
+    flex-direction: column;
+}
+
+.container--timeline-arrow {
+    transform: rotate(90deg)
+}
+
+.container__resume--timeline ul li {
+    display: block;
+    width: 3px;
+    height: 160px;
+    background: #fff;
+} */

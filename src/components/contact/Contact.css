@@ -147,6 +147,10 @@ p>span {
 
     .container__contact__form {
         width: 100%;
+    } 
+
+    .container__form__input {
+        width: 91%;
     }
 
     .container__contact__form>div {

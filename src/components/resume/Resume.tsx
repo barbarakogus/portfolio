@@ -1,6 +1,8 @@
 import './Resume.css';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import useOnScreen from '../../hooks/useOnScreen';
+import Timeline from '../timenine/Timeline';
+import TimelineMobile from '../timelineMobile/TimelineMobile';
 
 const resumes: Resume[] = [
     {
@@ -46,25 +48,30 @@ function Resume() {
         }
     }, [isVisible]);
 
+    const [screenSize, getDimension] = useState({
+        dynamicWidth: window.innerWidth,
+        dynamicHeight: window.innerHeight
+    });
+
+    const setDimension = () => {
+        getDimension({
+            dynamicWidth: window.innerWidth,
+            dynamicHeight: window.innerHeight
+        })
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', setDimension);
+        return (() => {
+            window.removeEventListener('resize', setDimension);
+        })
+    }, [screenSize]);
+
     return (
         <div id='resumepage' className="container__resume">
             <h2 className="container__resume--title">Resume</h2>
             <hr className='container__resume--line'></hr>
-            <div className='container__resume--timeline'>
-                <img src="https://img.icons8.com/carbon-copy/100/ffffff/chevron-right.png" />
-                <span ref={ref} className='container--timeline-start'></span>
-                <ul>
-                    {resumes.map((resume, key) =>
-                        <li key={key}>
-                            <div>
-                                <h3 className='resume--title'>{resume.title}</h3>
-                                <p className='resume--description'>{resume.description}</p>
-                                <p className='resume--date'>{resume.date}</p>
-                            </div>
-                        </li>
-                    )}
-                </ul>
-            </div>
+            {screenSize.dynamicWidth < 768 ? <TimelineMobile resumes={resumes} refResume={ref} /> : <Timeline resumes={resumes} refResume={ref} />}
             <a href='https://storage.googleapis.com/portfolio_bk/cv_barbaraKogus_2022.pdf' className='container__resume--btn-dowloadCV' download target='_blank'>Dowload Resume</a>
         </div>
     );
