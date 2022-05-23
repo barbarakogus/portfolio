@@ -23,7 +23,22 @@
 }
 
 @media screen and (max-width:768px) {
-   .container__home {
-       flex-direction: column;
-   }
+    .container__home {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .content--text {
+        font-size: 2rem;
+        line-height: 3rem;
+        padding: 3rem;
+
+    }
+    .container__home--img {
+
+    }
+
+    .home--img {
+        width: 350px;
+    }
 }

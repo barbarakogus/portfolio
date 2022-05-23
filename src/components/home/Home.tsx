@@ -23,7 +23,7 @@ function Home() {
                 </h1>
             </section>
             <section className='container__home--img'>
-                <img className='container__home--img' src={profileImg} />
+                <img className='home--img' src={profileImg} />
             </section>
         </div>
     );
