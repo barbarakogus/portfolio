@@ -25,3 +25,10 @@
     padding-bottom: 2rem;
     width: 80%;
 }
+
+@media screen and (max-width:768px) {
+    .container__portfolio--line {
+        margin-left: 4rem;
+        width: 44%;
+    }
+}

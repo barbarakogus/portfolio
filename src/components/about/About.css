@@ -33,7 +33,7 @@
     width: 35%;
 }
 
-.description__about > p {
+.description__about>p {
     padding: 1rem;
 }
 
@@ -47,6 +47,51 @@
 }
 
 .content__about--icon {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.about--icon {
     margin-right: 6rem;
     margin-top: 2rem;
+}
+
+@media screen and (max-width:768px) {
+    .container__about--title {
+        padding-top: 5rem;
+        width: 80%;
+    }
+
+    .container__about--line {
+        margin-left: 4rem;
+        width: 21%;
+    }
+
+    .container__about--content {
+        flex-direction: column;
+        margin: 1.5rem auto;
+        width: 85%;
+    }
+
+    .description__about {
+        line-height: 1.8rem;
+    }
+
+    .description__about {
+        text-align: center;
+        width: 100%;
+    }
+
+    .content__about {
+        margin-top: 1.3rem;
+        width: 100%;
+    }
+
+    .content__about--icon {
+        justify-content: center;
+    }
+
+    .about--icon {
+        margin-right: 3rem;
+    }
 }
