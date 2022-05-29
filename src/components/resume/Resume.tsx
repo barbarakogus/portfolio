@@ -31,8 +31,8 @@ const resumes: Resume[] = [
         date: '2020 - 2021'
     },
     {
-        title: 'School of applied technology </salt>',
-        description: 'School of applied technology',
+        title: 'Full-stack JavaScript developer',
+        description: 'School of applied technology </salt>',
         date: '2022 - Present'
     }
 ]
