@@ -125,6 +125,10 @@ p>span {
 }
 
 @media screen and (max-width:768px) {
+    .container__contact {
+        height: 100%;
+        padding: 1rem 0rem;
+    }
     .container__contact--title {
         width: 85%;
     }
