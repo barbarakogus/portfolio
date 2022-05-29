@@ -2,6 +2,7 @@
     background-color: var(--backgroung--secondary);
     height: auto;
     position: relative;
+    padding-bottom: 2rem;
 }
 
 .container__portfolio--title {

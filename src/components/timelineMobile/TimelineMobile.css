@@ -1,29 +1,98 @@
 .container__timelineMobile {
-    background-color: aqua;
-}
-/* 
-.container__resume--timeline {
+    display: flex;
     flex-direction: column;
+    margin: 0 auto;
+    padding-bottom: 4rem;
+    width: 80%;
 }
 
-.container--timeline-arrow {
-    transform: rotate(90deg)
+.container--timelineMobile-arrow {
+    transform: rotate(90deg);
+    width: 100px;
 }
 
-container--timelineMobile-start {
+.container__timelineMobile ul {
+    align-self: baseline;
+    margin-left: 48px;
+}
+
+.container__timelineMobile ul li {
+    background: #fff;
+    list-style-type: none;
+    margin: 0 auto;
+    padding-top: 35px;
+    position: relative;
+    width: 3px;
+}
+
+.container__timelineMobile ul li::after {
     background: var(--contrast-area);
     border-radius: 60%;
-    content: '';
-    height: 12px;
-    margin-right: .1rem;
-    margin-top: 1.2rem;
-    transform: translateY(-50%);
-    width: 12px;
+    bottom: 0%;
+    content: "";
+    height: 13px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 13px;
+    z-index: 1;
 }
 
-.container__resume--timeline ul li {
-    display: block;
-    width: 3px;
-    height: 160px;
-    background: #fff;
-} */
+.container__timelineMobile ul li div {
+    background: var(--backgroung--secondary);
+    border-radius: 1rem 1.5rem 1rem 0rem;
+    color: var(--text-color);
+    line-height: 1.5rem;
+    padding: .8rem;
+    position: relative;
+    width: 190px;
+}
+
+.container__timelineMobile ul li div::before {
+    border-style: solid;
+    bottom: 7px;
+    content: "";
+    position: absolute;
+    width: 0;
+}
+
+.container__timelineMobile ul li div {
+    left: 45px;
+}
+
+.container__timelineMobile ul li div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent var(--backgroung--secondary) transparent transparent;
+}
+
+/* EFFECTS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ul li::after {
+    transition: background 0.5s ease-in-out;
+}
+
+.timeline ul li.in-view::after {
+    background: #f45b69;
+}
+
+.timeline ul li div {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.timeline ul li:nth-child(odd) div {
+    transform: translate3d(200px, 0, 0);
+}
+
+.timeline ul li:nth-child(even) div {
+    transform: translate3d(-200px, 0, 0);
+}
+
+.timeline ul li.in-view div {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}

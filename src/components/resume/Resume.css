@@ -41,6 +41,10 @@
 }
 
 @media screen and (max-width:768px) {
+    .container__resume {
+        height: 100%;
+        padding: 4rem 0rem;
+    }
     .container__resume--line {
         margin-left: 4rem;
         width: 28%;
