@@ -43,11 +43,11 @@ function Portfolio() {
     const ref = useRef() as React.MutableRefObject<HTMLDivElement>
     const isVisible = useOnScreen(ref);
 
-    useEffect(() => {
-        if (isVisible) {
-            window.location.hash = '#portfoliopage'
-        }
-    }, [isVisible]);
+    // useEffect(() => {
+    //     if (isVisible) {
+    //         window.location.hash = '#portfoliopage'
+    //     }
+    // }, [isVisible]);
 
     return (
         <div id='portfoliopage' className="container__portfolio">
