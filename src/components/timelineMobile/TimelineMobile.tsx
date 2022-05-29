@@ -9,15 +9,15 @@ function TimelineMobile({ resumes, refResume }: ResumeProps) {
 
     return (
         <div className='container__timelineMobile'>
-            <img className='container--timeline-arrow' src="https://img.icons8.com/carbon-copy/100/ffffff/chevron-right.png" />
-            <span ref={refResume}  className='container--timeline-start'></span>
+            <img className='container--timelineMobile-arrow' src="https://img.icons8.com/carbon-copy/100/ffffff/chevron-right.png" />
+            <span ref={refResume}  className='container--timelineMobile-start'></span>
             <ul>
                 {resumes.map((resume, key) =>
                     <li key={key}>
                         <div>
-                            <h3 className='resume--title'>{resume.title}</h3>
-                            <p className='resume--description'>{resume.description}</p>
-                            <p className='resume--date'>{resume.date}</p>
+                            <h3 className='timelineMobile--title'>{resume.title}</h3>
+                            <p className='timelineMobile--description'>{resume.description}</p>
+                            <p className='timelineMobile--date'>{resume.date}</p>
                         </div>
                     </li>
                 )}

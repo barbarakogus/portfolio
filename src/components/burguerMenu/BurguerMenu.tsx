@@ -1,4 +1,3 @@
-import './BurguerMenu.css';
 import { slide as Menu } from 'react-burger-menu';
 import { useState } from 'react';
 
@@ -57,7 +56,6 @@ function BurguerMenu() {
 
     const hadleCloseMenu = () => {
         setMenuIsOpen(false);
-        console.log(isMenuOpen)
     };
 
     const handleStateChange = (state: any) => {

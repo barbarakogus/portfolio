@@ -10,6 +10,17 @@
     transform: rotate(90deg)
 }
 
+container--timelineMobile-start {
+    background: var(--contrast-area);
+    border-radius: 60%;
+    content: '';
+    height: 12px;
+    margin-right: .1rem;
+    margin-top: 1.2rem;
+    transform: translateY(-50%);
+    width: 12px;
+}
+
 .container__resume--timeline ul li {
     display: block;
     width: 3px;

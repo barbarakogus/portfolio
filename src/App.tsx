@@ -6,14 +6,34 @@ import Resume from './components/resume/Resume';
 import Portfolio from './components/portfolio/Portfolio';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
+import { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
- 
+
+  const [screenSize, getDimension] = useState({
+    dynamicWidth: window.innerWidth,
+    dynamicHeight: window.innerHeight
+  });
+
+  const setDimension = () => {
+    getDimension({
+      dynamicWidth: window.innerWidth,
+      dynamicHeight: window.innerHeight
+    })
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', setDimension);
+    return (() => {
+      window.removeEventListener('resize', setDimension);
+    })
+  }, [screenSize]);
+
   return (
     <div className="App">
       <Header />
-      <Pagination />
+      {screenSize.dynamicWidth > 768 ? <Pagination /> : null}
       <Home />
       <About />
       <Resume />
