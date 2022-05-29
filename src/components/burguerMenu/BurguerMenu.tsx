@@ -1,4 +1,4 @@
-import { slide as Menu } from 'react-burger-menu';
+import { slide as Menu, State } from 'react-burger-menu';
 import { useState } from 'react';
 
 const style = {
@@ -58,7 +58,7 @@ function BurguerMenu() {
         setMenuIsOpen(false);
     };
 
-    const handleStateChange = (state: any) => {
+    const handleStateChange = (state: State) => {
         setMenuIsOpen(state.isOpen);
       };
 

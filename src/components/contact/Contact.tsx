@@ -7,11 +7,11 @@ function Contact() {
     const ref = useRef() as React.MutableRefObject<HTMLDivElement>
     const isVisible = useOnScreen(ref);
 
-    useEffect(() => {
-        if (isVisible) {
-            window.location.hash = '#contactpage'
-        }
-    }, [isVisible]);
+    // useEffect(() => {
+    //     if (isVisible) {
+    //         window.location.hash = '#contactpage'
+    //     }
+    // }, [isVisible]);
 
     return (
         <div id='contactpage' className="container__contact">

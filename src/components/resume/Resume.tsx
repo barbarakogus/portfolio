@@ -42,11 +42,11 @@ function Resume() {
     const ref = useRef() as React.MutableRefObject<HTMLDivElement>
     const isVisible = useOnScreen(ref);
 
-    useEffect(() => {
-        if (isVisible) {
-            window.location.hash = '#resumepage'
-        }
-    }, [isVisible]);
+    // useEffect(() => {
+    //     if (isVisible) {
+    //         window.location.hash = '#resumepage'
+    //     }
+    // }, [isVisible]);
 
     const [screenSize, getDimension] = useState({
         dynamicWidth: window.innerWidth,

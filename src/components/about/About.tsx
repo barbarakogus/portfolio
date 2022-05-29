@@ -7,11 +7,11 @@ function About() {
   const ref = useRef() as React.MutableRefObject<HTMLDivElement>;
   const isVisible = useOnScreen(ref);
 
-  useEffect(() => {
-    if (isVisible) {
-      window.location.hash = '#aboutpage';
-    }
-  }, [isVisible]);
+  // useEffect(() => {
+  //   if (isVisible) {
+  //     window.location.hash = '#aboutpage';
+  //   }
+  // }, [isVisible]);
 
   return (
     <div id='aboutpage' className="container__about" >
