@@ -1,7 +1,7 @@
 import './Resume.css';
 import { useEffect, useRef, useState } from 'react';
 import useOnScreen from '../../hooks/useOnScreen';
-import Timeline from '../timenine/Timeline';
+import Timeline from '../timeline/Timeline';
 import TimelineMobile from '../timelineMobile/TimelineMobile';
 
 const resumes: Resume[] = [
@@ -42,11 +42,11 @@ function Resume() {
     const ref = useRef() as React.MutableRefObject<HTMLDivElement>
     const isVisible = useOnScreen(ref);
 
-    // useEffect(() => {
-    //     if (isVisible) {
-    //         window.location.hash = '#resumepage'
-    //     }
-    // }, [isVisible]);
+    useEffect(() => {
+        if (isVisible) {
+            window.location.hash = '#resumepage'
+        }
+    }, [isVisible]);
 
     const [screenSize, getDimension] = useState({
         dynamicWidth: window.innerWidth,

@@ -8,11 +8,11 @@ function Home() {
     const ref = useRef() as React.MutableRefObject<HTMLDivElement>
     const isVisible = useOnScreen(ref);
 
-    // useEffect(() => {
-    //     if (isVisible) {
-    //         window.location.hash = '#homepage'
-    //     }
-    // }, [isVisible]);
+    useEffect(() => {
+        if (isVisible) {
+            window.location.hash = '#homepage'
+        }
+    }, [isVisible]);
 
     return (
         <div id='homepage' className="container__home">
