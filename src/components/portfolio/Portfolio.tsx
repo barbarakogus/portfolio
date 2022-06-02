@@ -3,22 +3,15 @@ import { useEffect, useRef } from 'react';
 import useOnScreen from '../../hooks/useOnScreen';
 import CardPortfolio from '../cardPortfolio/CardPortfolio';
 
+//332 205
 const projects: Project[] = [
     {
-        title: 'Boardkut',
-        description: 'Hackaday Salt project - App to manipulate data about boardgames.',
-        technologies: 'React - Redux - Docker - PostGres',
-        img: 'https://storage.googleapis.com/portfolio_bk/images/boardkut.png',
-        gitLink: 'https://github.com/barbarakogus/boardkut_frontend',
-        projectLink: 'https://boardkut.herokuapp.com/'
-    },
-    {
-        title: 'Dog Sitter',
-        description: 'My first website. I built it to share my work as a dog sitter and also to practice what I had learned about front end.',
-        technologies: 'HTML - CSS - JavaScript',
-        img: 'https://storage.googleapis.com/portfolio_bk/images/boardkut.png',
-        gitLink: 'https://github.com/barbarakogus/boardkut_frontend',
-        projectLink: 'https://boardkut.herokuapp.com/'
+        title: 'My Private Chef',
+        description: 'Salt final project - App to book a chef to prepare meals for you and your family.',
+        technologies: 'React - Redux - Sass - MongoDB',
+        img: 'https://storage.googleapis.com/portfolio_bk/images/myPrivateChef.png',
+        gitLink: 'https://github.com/theAliensAlliance',
+        projectLink: 'https://myprivatechef.herokuapp.com/'
     },
     {
         title: 'Boardkut',
@@ -33,9 +26,33 @@ const projects: Project[] = [
         description: 'An app to add and delete items from a todo list.',
         technologies: 'React - Redux/Toolkit - TypeScript',
         img: 'https://storage.googleapis.com/portfolio_bk/images/toDoList.png',
-        gitLink: 'https://github.com/barbarakogus/boardkut_frontend',
+        gitLink: '',
         projectLink: 'https://boardkut.herokuapp.com/'
     },
+    {
+        title: 'Dog Sitter',
+        description: 'My first website. I built it to share my work as a dog sitter and also to practice what I had learned about front end.',
+        technologies: 'HTML - CSS - JavaScript',
+        img: 'https://storage.googleapis.com/portfolio_bk/images/dogSitter.png',
+        gitLink: 'https://github.com/barbarakogus/dogsitter',
+        projectLink: 'https://boardkut.herokuapp.com/'
+    },
+    {
+        title: 'Album finder',
+        description: 'An app to find all albums and lyrics from your favorite singer.',
+        technologies: 'Android - Kotlin - Retrofit - RecyclerView',
+        img: 'https://storage.googleapis.com/portfolio_bk/images/mobileAlbumFinder.png',
+        gitLink: 'https://github.com/barbarakogus/albums-search',
+        projectLink: ''
+    },
+    {
+        title: 'ByteBank',
+        description: 'App to start working with object-oriented.',
+        technologies: 'Android - Kotlin',
+        img: 'https://storage.googleapis.com/portfolio_bk/images/byteBank.png',
+        gitLink: 'https://github.com/barbarakogus/mobile_byteBank',
+        projectLink: ''
+    }
 ]
 
 function Portfolio() {

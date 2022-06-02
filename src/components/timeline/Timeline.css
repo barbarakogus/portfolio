@@ -85,7 +85,7 @@
     transform: translateY(-100%);
 }
 
-.container__resume--timeline ul li:nth-child(odd) div::before {
+.container__resume--timeline ul li:nth-child(odd) div::before { /*AQUI*/
     top: 100%;
     border-width: 8px 8px 0 0;
     border-color: var(--backgroung--secondary) transparent transparent transparent;

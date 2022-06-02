@@ -21,7 +21,7 @@
 .container__about--content {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     margin: 4rem auto;
 }
 
@@ -30,26 +30,36 @@
     font-size: 19px;
     font-weight: 300;
     line-height: 2rem;
-    width: 35%;
+    margin-right: 3rem;
+    width: 45%;
+}
+
+.contrast {
+    color: var(--contrast-area);
 }
 
 .content__about {
+    text-align: center;
     width: 30%;
 }
 
 .content__about--title {
     color: var(--contrast-area);
     font-size: 24px;
+    padding-bottom: 1.5rem;
 }
 
 .content__about--icon {
+    background-color: var(--backgroung--technologies-icons);
+    border-radius: 70px;
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-around;
+    width: 100%;
 }
 
 .about--icon {
-    margin-right: 6rem;
-    margin-top: 2rem;
+    margin: 1rem 2.5rem;
 }
 
 @media screen and (max-width:768px) {
@@ -74,6 +84,7 @@
 
     .description__about {
         line-height: 1.8rem;
+        margin-right: 0rem;
         text-align: start;
         width: 100%;
     }

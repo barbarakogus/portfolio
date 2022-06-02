@@ -2,6 +2,7 @@
     background-color: var(--backgroung--primary);
     border-radius: 1.8rem;
     color: var(--text-color);
+    height: 100%;
     margin-top: 2rem;
     width: 333px; 
 }
@@ -24,13 +25,12 @@
 }
 
 .container__cardPortfolio--img {
-    padding: 1rem;
+    padding: 0rem 1rem 1rem 1rem;
     width: 300px;
 }
 
-.cardPortfolio--anchor-left{
+.cardPortfolio--anchor-btn{
     background-color: var(--contrast-area);
-    border-radius: 0rem 0rem 0rem 1.8rem;
     color: var(--text-color);
     display: inline-block;
     padding: .8rem .6rem;
@@ -39,21 +39,18 @@
     width: 44.22%;
 }
 
-.cardPortfolio--anchor-left:hover {
-    background-color: var(--btn-hover);
-}
+.left {
+    border-radius: 0rem 0rem 0rem 1.8rem;
+} 
 
-.cardPortfolio--anchor-right{
-    background-color: var(--contrast-area);
+.right {
     border-radius: 0rem 0rem 1.8rem 0rem;
-    color: var(--text-color);
-    display: inline-block;
-    padding: .8rem 0.6rem;
-    text-align: center;
-    text-decoration: none;
-    width: 44.22%;
 }
 
-.cardPortfolio--anchor-right:hover {
+.isDisabled {
+    pointer-events: none;
+}
+
+.cardPortfolio--anchor-btn:hover {
     background-color: var(--btn-hover);
 }

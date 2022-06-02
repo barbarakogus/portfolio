@@ -50,7 +50,7 @@
 
 .container__timelineMobile ul li div::before {
     border-style: solid;
-    bottom: 7px;
+    bottom: 0px;
     content: "";
     position: absolute;
     width: 0;
@@ -62,7 +62,7 @@
 
 .container__timelineMobile ul li div::before {
     left: -15px;
-    border-width: 8px 16px 8px 0;
+    border-width: 10px 16px 0 0;
     border-color: transparent var(--backgroung--secondary) transparent transparent;
 }
 

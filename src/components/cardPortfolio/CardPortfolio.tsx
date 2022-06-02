@@ -1,3 +1,4 @@
+import { isDisabled } from '@testing-library/user-event/dist/utils';
 import './CardPortfolio.css';
 
 interface CardPortfolioProps {
@@ -13,8 +14,8 @@ function CardPortfolio({ project }: CardPortfolioProps) {
             <p className="container__cardPortfolio--technologies">{project.technologies}</p>
             <img className="container__cardPortfolio--img" src={project.img}></img>
             <div className="container__cardPortfolio--links">
-                <a className="cardPortfolio--anchor-left" target='_blank' href={project.projectLink}>Live</a>
-                <a className="cardPortfolio--anchor-right" target='_blank' href={project.gitLink}>GitHub</a>
+                <a className={`cardPortfolio--anchor-btn left ${project.projectLink === '' ? 'isDisabled' : ''}`} target='_blank' href={project.projectLink}>Live</a>
+                <a className={`cardPortfolio--anchor-btn right ${project.gitLink === '' ? 'isDisabled' : ''}`} target='_blank' href={project.gitLink}>GitHub</a>
             </div>
         </div>
     );

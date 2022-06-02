@@ -20,7 +20,7 @@ function About() {
       <div className="container__about--content">
         <section ref={ref} className='description__about'>
           <p>I'm a Brazilian living in Stockholm. I recently discovered myself as a developer, but I used to be a forestry engineer before. I remain passionate about the environment, but now I redirect my curiosity to find a new way to build a better world with technology. </p>
-          <p>I started my journey with programming by studying Front-end as a self-learner. Then, one year after, I received a proposal to learn the development of Android applications. A new window had opened at this time, my skills were improved, and I learned a new language, Kotlin. So, in January 2022, I joined Salt, and with the instructors, I deepened my knowledge in development, learning new topics like TDD, Typescript, Node, and MOB, which led me to become a Full-Stack developer.</p>
+          <p>I started my journey with programming by studying <span className='contrast'>Front-end</span> as a self-learner. Then, one year after, I received a proposal to learn the development of Android applications. A new window had opened at this time, my skills were improved, and I learned a new language, <span className='contrast'>Kotlin</span>. So, in January 2022, I joined Salt, and with the instructors, I deepened my knowledge in development, learning new topics like TDD, Typescript, Node, and MOB, which led me to become a <span className='contrast'>Full-Stack developer</span>.</p>
         </section>
         <section className='content__about'>
           <p className='content__about--title'>Technologies</p>
