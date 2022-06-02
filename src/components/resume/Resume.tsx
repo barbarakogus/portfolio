@@ -11,17 +11,17 @@ const resumes: Resume[] = [
         date: '2007 - 2011'
     },
     {
-        title: 'Coordinator of Graphic Editing of real estate Lot',
-        description: 'Geomais Geotechnology',
-        date: '2013 - 2018'
-    },
-    {
         title: 'MBA in auditing, expertise and environmental Management',
         description: 'IPOG',
         date: '2014 - 2016'
     },
     {
-        title: 'Carrer Front-end',
+        title: 'Coordinator of Graphic Editing of real estate Lot',
+        description: 'Geomais Geotechnology',
+        date: '2013 - 2018'
+    },
+    {
+        title: 'Front-end carrer',
         description: 'Alura',
         date: '2019 - 2020'
     },

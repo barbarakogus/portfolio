@@ -19,7 +19,8 @@ function About() {
       <hr className='container__about--line'></hr>
       <div className="container__about--content">
         <section ref={ref} className='description__about'>
-          <p>Lorem ipsum dolor sit amet. A repudiandae quos est nobis ipsum et saepe nobis. Qui exercitationem facere est internos voluptates aut quam consequatur quo nulla repellat qui vero velit qui dolorem omnis. Et quos voluptatibus sit dolor distinctio et laboriosam autem ut corporis assumenda qui consequuntur facere 33 dolorem cumque?</p>
+          <p>I'm a Brazilian living in Stockholm. I recently discovered myself as a developer, but I used to be a forestry engineer before. I remain passionate about the environment, but now I redirect my curiosity to find a new way to build a better world with technology. </p>
+          <p>I started my journey with programming by studying Front-end as a self-learner. Then, one year after, I received a proposal to learn the development of Android applications. A new window had opened at this time, my skills were improved, and I learned a new language, Kotlin. So, in January 2022, I joined Salt, and with the instructors, I deepened my knowledge in development, learning new topics like TDD, Typescript, Node, and MOB, which led me to become a Full-Stack developer.</p>
         </section>
         <section className='content__about'>
           <p className='content__about--title'>Technologies</p>

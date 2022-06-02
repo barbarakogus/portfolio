@@ -13,9 +13,9 @@ const projects: Project[] = [
         projectLink: 'https://boardkut.herokuapp.com/'
     },
     {
-        title: 'Boardkut',
-        description: 'Hackaday Salt project - App to manipulate data about boardgames.',
-        technologies: 'React - Redux - Docker - PostGres',
+        title: 'Dog Sitter',
+        description: 'My first website. I built it to share my work as a dog sitter and also to practice what I had learned about front end.',
+        technologies: 'HTML - CSS - JavaScript',
         img: 'https://storage.googleapis.com/portfolio_bk/images/boardkut.png',
         gitLink: 'https://github.com/barbarakogus/boardkut_frontend',
         projectLink: 'https://boardkut.herokuapp.com/'
@@ -29,10 +29,10 @@ const projects: Project[] = [
         projectLink: 'https://boardkut.herokuapp.com/'
     },
     {
-        title: 'Boardkut',
-        description: 'Hackaday Salt project - App to manipulate data about boardgames.',
-        technologies: 'React - Redux - Docker - PostGres',
-        img: 'https://storage.googleapis.com/portfolio_bk/images/boardkut.png',
+        title: 'Todo List',
+        description: 'An app to add and delete items from a todo list.',
+        technologies: 'React - Redux/Toolkit - TypeScript',
+        img: 'https://storage.googleapis.com/portfolio_bk/images/toDoList.png',
         gitLink: 'https://github.com/barbarakogus/boardkut_frontend',
         projectLink: 'https://boardkut.herokuapp.com/'
     },

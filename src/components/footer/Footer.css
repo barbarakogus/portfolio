@@ -30,6 +30,12 @@
 .footer--text {
     color: var(--text-color);
     font-weight: 300;
+    margin-right: 1rem;
+}
+
+.icon8 {
+    color: var(--text-color);
+    text-decoration: none;
 }
 
 @media screen and (max-width:768px) {
@@ -41,6 +47,12 @@
         margin-left: 0rem;
     }
     .footer--icon {
+        margin-right: .2rem;
+    }
+    .footer--text {
+        margin-right: .3rem;
+    }
+    #linkedin {
         margin-right: 1rem;
     }
 }
