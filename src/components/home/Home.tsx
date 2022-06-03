@@ -2,20 +2,24 @@ import './Home.css';
 import profileImg from '../../assets/img/profile.png';
 import { useEffect, useRef } from 'react';
 import useOnScreen from '../../hooks/useOnScreen';
+import { useDispatch } from 'react-redux';
+import { setCurrentPage } from '../../features/portfolioSlice';
 
 function Home() {
+
+    const dispatch = useDispatch();
 
     const ref = useRef() as React.MutableRefObject<HTMLDivElement>
     const isVisible = useOnScreen(ref);
 
     useEffect(() => {
         if (isVisible) {
-            window.location.hash = '#homepage'
+            dispatch(setCurrentPage('home'));
         }
     }, [isVisible]);
 
     return (
-        <div id='homepage' className="container__home">
+        <div id='home' className="container__home">
             <section ref={ref} className='container__home--content'>
                 <h1 className='content--text'>Welcome to my website, <br />
                     I am <span className='content--text--title'>Bárbara Kógus</span> <br />

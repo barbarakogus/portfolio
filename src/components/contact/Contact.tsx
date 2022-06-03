@@ -1,20 +1,24 @@
 import './Contact.css';
 import { useEffect, useRef } from 'react';
 import useOnScreen from '../../hooks/useOnScreen';
+import { setCurrentPage } from '../../features/portfolioSlice';
+import { useDispatch } from 'react-redux';
 
 function Contact() {
+
+    const dispatch = useDispatch();
 
     const ref = useRef() as React.MutableRefObject<HTMLDivElement>
     const isVisible = useOnScreen(ref);
 
     useEffect(() => {
         if (isVisible) {
-            window.location.hash = '#contactpage'
+            dispatch(setCurrentPage('contact'));
         }
     }, [isVisible]);
 
     return (
-        <div id='contactpage' className="container__contact">
+        <div id='contact' className="container__contact">
             <h2 className="container__contact--title">Contact</h2>
             <hr className='container__contact--line'></hr>
             <h4 ref={ref} className='container__contact--introduction'>Hi, did you like what you've seen so far?! I hope so, then let's talk!</h4>

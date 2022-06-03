@@ -1,20 +1,24 @@
 import './About.css';
 import { useEffect, useRef } from 'react';
 import useOnScreen from '../../hooks/useOnScreen';
+import { useDispatch } from 'react-redux';
+import { setCurrentPage } from '../../features/portfolioSlice';
 
 function About() {
+
+  const dispatch = useDispatch();
 
   const ref = useRef() as React.MutableRefObject<HTMLDivElement>;
   const isVisible = useOnScreen(ref);
 
   useEffect(() => {
     if (isVisible) {
-      window.location.hash = '#aboutpage';
+      dispatch(setCurrentPage('about'));
     }
   }, [isVisible]);
 
   return (
-    <div id='aboutpage' className="container__about" >
+    <div id='about' className="container__about" >
       <h2 className="container__about--title">About</h2>
       <hr className='container__about--line'></hr>
       <div className="container__about--content">

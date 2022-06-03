@@ -2,13 +2,15 @@ import './Portfolio.css';
 import { useEffect, useRef } from 'react';
 import useOnScreen from '../../hooks/useOnScreen';
 import CardPortfolio from '../cardPortfolio/CardPortfolio';
+import { setCurrentPage } from '../../features/portfolioSlice';
+import { useDispatch } from 'react-redux';
 
 //332 205
 const projects: Project[] = [
     {
         title: 'My Private Chef',
         description: 'Salt final project - App to book a chef to prepare meals for you and your family.',
-        technologies: 'React - Redux - Sass - MongoDB',
+        technologies: 'React - Redux - TypeScript - MongoDB',
         img: 'https://storage.googleapis.com/portfolio_bk/images/myPrivateChef.png',
         gitLink: 'https://github.com/theAliensAlliance',
         projectLink: 'https://myprivatechef.herokuapp.com/'
@@ -48,7 +50,7 @@ const projects: Project[] = [
     {
         title: 'ByteBank',
         description: 'App to start working with object-oriented.',
-        technologies: 'Android - Kotlin',
+        technologies: 'Android - Kotlin - RecyclerView',
         img: 'https://storage.googleapis.com/portfolio_bk/images/byteBank.png',
         gitLink: 'https://github.com/barbarakogus/mobile_byteBank',
         projectLink: ''
@@ -57,17 +59,19 @@ const projects: Project[] = [
 
 function Portfolio() {
 
+    const dispatch = useDispatch();
+
     const ref = useRef() as React.MutableRefObject<HTMLDivElement>
     const isVisible = useOnScreen(ref);
 
-     useEffect(() => {
+    useEffect(() => {
         if (isVisible) {
-            window.location.hash = '#portfoliopage'
+            dispatch(setCurrentPage('portfolio'));
         }
     }, [isVisible]);
 
     return (
-        <div id='portfoliopage' className="container__portfolio">
+        <div id='portfolio' className="container__portfolio">
             <h2 ref={ref} className="container__portfolio--title">My projects</h2>
             <hr className='container__portfolio--line'></hr>
             <div className="container__portfolio__cards">

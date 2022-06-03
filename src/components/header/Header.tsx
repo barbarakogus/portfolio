@@ -1,15 +1,11 @@
 import { useEffect, useState } from 'react';
 import './Header.css';
-import { useLocation } from '../../hooks/useLocation';
 import BurguerMenu from '../burguerMenu/BurguerMenu';
+import { useAppSelector } from '../../features/store';
 
 function Header() {
 
-    const location = useLocation();
-
-    useEffect(() => {
-        console.log(location.hash);
-    }, [location])
+    const { currentPage } = useAppSelector(state => state.portfolioReducer);
 
     const [screenSize, getDimension] = useState({
         dynamicWidth: window.innerWidth,
@@ -36,11 +32,11 @@ function Header() {
                 <h1 className='hearder--title'>Bárbara Kógus</h1>
                 {screenSize.dynamicWidth < 768 ? <BurguerMenu /> :
                     <nav className='header__navigation'>
-                        <a href='#homepage' className={`header__anchor ${location.hash === '#homepage' ? 'active' : ''}`}>Home</a>
-                        <a href='#aboutpage' className={`header__anchor ${location.hash === '#aboutpage' ? 'active' : ''}`}>About</a>
-                        <a href='#resumepage' className={`header__anchor ${location.hash === '#resumepage' ? 'active' : ''}`}>Resume</a>
-                        <a href='#portfoliopage' className={`header__anchor ${location.hash === '#portfoliopage' ? 'active' : ''}`}>Portfolio</a>
-                        <a href='#contactpage' className={`header__anchor ${location.hash === '#contactpage' ? 'active' : ''}`}>Contact</a>
+                        <a href='#home' className={`header__anchor ${currentPage === 'home' ? 'active' : ''}`}>Home</a>
+                        <a href='#about' className={`header__anchor ${currentPage === 'about' ? 'active' : ''}`}>About</a>
+                        <a href='#resume' className={`header__anchor ${currentPage === 'resume' ? 'active' : ''}`}>Resume</a>
+                        <a href='#portfolio' className={`header__anchor ${currentPage === 'portfolio' ? 'active' : ''}`}>Portfolio</a>
+                        <a href='#contact' className={`header__anchor ${currentPage === 'contact' ? 'active' : ''}`}>Contact</a>
                     </nav>
                 }
             </div>

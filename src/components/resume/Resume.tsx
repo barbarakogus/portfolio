@@ -3,6 +3,8 @@ import { useEffect, useRef, useState } from 'react';
 import useOnScreen from '../../hooks/useOnScreen';
 import Timeline from '../timeline/Timeline';
 import TimelineMobile from '../timelineMobile/TimelineMobile';
+import { setCurrentPage } from '../../features/portfolioSlice';
+import { useDispatch } from 'react-redux';
 
 const resumes: Resume[] = [
     {
@@ -39,12 +41,14 @@ const resumes: Resume[] = [
 
 function Resume() {
 
+    const dispatch = useDispatch();
+
     const ref = useRef() as React.MutableRefObject<HTMLDivElement>
     const isVisible = useOnScreen(ref);
 
     useEffect(() => {
         if (isVisible) {
-            window.location.hash = '#resumepage'
+            dispatch(setCurrentPage('resume'))
         }
     }, [isVisible]);
 
@@ -68,7 +72,7 @@ function Resume() {
     }, [screenSize]);
 
     return (
-        <div id='resumepage' className="container__resume">
+        <div id='resume' className="container__resume">
             <h2 className="container__resume--title">Resume</h2>
             <hr className='container__resume--line'></hr>
             {screenSize.dynamicWidth < 768 ? <TimelineMobile resumes={resumes} refResume={ref} /> : <Timeline resumes={resumes} refResume={ref} />}
