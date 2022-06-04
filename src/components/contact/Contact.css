@@ -154,12 +154,12 @@ p>span {
     } 
 
     .container__form__input {
-        width: 91%;
+        width: 90.3%;
     }
 
     .container__contact__form>div {
         flex-direction: column;
-        height: 5.5rem;
+        height: 5.7rem;
         margin-top: 2rem;
     }
 }
