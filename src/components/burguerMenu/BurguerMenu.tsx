@@ -65,11 +65,11 @@ function BurguerMenu() {
     return (
         <div >
             <Menu styles={style} isOpen={isMenuOpen} onStateChange={handleStateChange} >
-                <a href='#homepage' className='header__anchor' onClick={() => hadleCloseMenu()}>Home</a>
-                <a href='#aboutpage' className='header__anchor' onClick={() => hadleCloseMenu()}>About</a>
-                <a href='#resumepage' className='header__anchor' onClick={() => hadleCloseMenu()}>Resume</a>
-                <a href='#portfoliopage' className='header__anchor' onClick={() => hadleCloseMenu()}>Portfolio</a>
-                <a href='#contactpage' className='header__anchor' onClick={() => hadleCloseMenu()}>Contact</a>
+                <a href='#home' className='header__anchor' onClick={() => hadleCloseMenu()}>Home</a>
+                <a href='#about' className='header__anchor' onClick={() => hadleCloseMenu()}>About</a>
+                <a href='#resume' className='header__anchor' onClick={() => hadleCloseMenu()}>Resume</a>
+                <a href='#portfolio' className='header__anchor' onClick={() => hadleCloseMenu()}>Portfolio</a>
+                <a href='#contact' className='header__anchor' onClick={() => hadleCloseMenu()}>Contact</a>
             </Menu>
         </div>
     );
