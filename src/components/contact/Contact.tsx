@@ -35,7 +35,7 @@ function Contact() {
                     </div>
                     <input className='container__form__input--email' placeholder='Email' name='email' type="email"></input>
                     <textarea cols={40} rows={6} className="container__form__input--textarea" placeholder='Message' name="mensagem"  /*maxLength={50}*/></textarea>
-                    <button className='container__form__input--btn'>Contact me</button>
+                    <button className='container__form__input--btn' onClick={() => alert('Under development')}>Contact me</button>
                 </form>
             </div>
         </div>

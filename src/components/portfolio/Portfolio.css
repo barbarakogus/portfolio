@@ -23,6 +23,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 1.5rem auto 0 auto;
+    max-width: 1252px;
     padding-bottom: 2rem;
     width: 80%;
 }
