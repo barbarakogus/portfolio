@@ -124,11 +124,30 @@ p>span {
     background-color: var(--btn-hover);
 }
 
+.container__form--statusMessage {
+    background-color: rgba(36, 36, 36, 0.2);
+    box-shadow: 0 0 2.08333rem rgb(0 0 0 / 50%);
+    border-radius: 1.6rem;
+    font-size: 22px;
+    line-height: 1.6rem;
+    padding: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.emailSucceed {
+    border: 2px solid #B2DFB7;
+}
+
+.emailFailed {
+    border: 2px solid #DF5B52;
+}
+
 @media screen and (max-width:768px) {
     .container__contact {
         height: 100%;
         padding: 1rem 0rem;
     }
+
     .container__contact--title {
         width: 85%;
     }
@@ -151,7 +170,7 @@ p>span {
 
     .container__contact__form {
         width: 100%;
-    } 
+    }
 
     .container__form__input {
         width: 90%;
