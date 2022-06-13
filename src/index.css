@@ -29,7 +29,8 @@ body {
   --backgroung--technologies-icons: #F2F4F4;
   --btn-hover: #724C68;
   --contrast-area: #e59ad1;
-  --span--text: #ca221f;
+  --span--failed: #DF5B52;
+  --span--succeed: #B2DFB7;
   --text-color: #ffffff;
   --work-Sans: 'Work Sans', sans-serif;
   --white: #ffffff;

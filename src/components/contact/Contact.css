@@ -74,6 +74,12 @@ p>span {
     width: 41%;
 }
 
+.container__form__input--invalidEmail {
+    color: var(--span--failed);
+    font-size: 14px;
+    padding-top: .8rem;
+}
+
 .container__form__input--email {
     background-color: var(--backgroung--secondary);
     border: none;
@@ -135,17 +141,17 @@ p>span {
 }
 
 .emailSucceed {
-    border: 2px solid #B2DFB7;
+    border: 2px solid var(--span--succeed);
 }
 
 .emailFailed {
-    border: 2px solid #DF5B52;
+    border: 2px solid var(--span--failed);
 }
 
 @media screen and (max-width:768px) {
     .container__contact {
         height: 100%;
-        padding: 1rem 0rem;
+        padding-bottom: 1.5rem;
     }
 
     .container__contact--title {

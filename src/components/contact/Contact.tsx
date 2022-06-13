@@ -12,6 +12,7 @@ function Contact() {
     const [inputMessage, setInputMessage] = useState('');
     const [emailResultMessage, setEmailResultMessage] = useState('');
     const [isEmailSent, setIsEmailSent] = useState(false);
+    const [isEmailValid, setIsEmailValid] = useState(true);
 
     const dispatch = useDispatch();
 
@@ -24,33 +25,45 @@ function Contact() {
         }
     }, [isVisible]);
 
+    //it is not getting here -- FIX TOMORROW!
+    function validateEmail(email: string) {
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        console.log('i am in')
+        return re.test(String(email).toLowerCase());
+    }
+
     const sendEmail = (event: React.SyntheticEvent) => {
         event.preventDefault();
-        
-        fetch('http://localhost:3002/email', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                name: inputName,
-                subject: inputSubject,
-                email: inputEmail,
-                message: inputMessage
+
+        if (validateEmail(inputEmail)) {
+
+            fetch('http://localhost:3002/email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: inputName,
+                    subject: inputSubject,
+                    email: inputEmail,
+                    message: inputMessage
+                })
             })
-        })
-            .then(() => {
-                setInputName('');
-                setInputSubject('');
-                setInputEmail('');
-                setInputMessage('');
-                setEmailResultMessage('Email successfully sent. Thank you for reaching out. As soon as possible, I will contact you.');
-                setIsEmailSent(true);
-            })
-            .catch((error) => {
-                setEmailResultMessage('Something went wrong. Please try later or get in touch via Linkedin. Sorry for the inconvenience.');
-                console.error(error);
-            }); 
+                .then(() => {
+                    setInputName('');
+                    setInputSubject('');
+                    setInputEmail('');
+                    setInputMessage('');
+                    setEmailResultMessage('Email successfully sent. Thank you for reaching out. As soon as possible, I will contact you.');
+                    setIsEmailSent(true);
+                })
+                .catch((error) => {
+                    setEmailResultMessage('Something went wrong. Please try later or get in touch via Linkedin. Sorry for the inconvenience.');
+                    console.error(error);
+                });
+        } else {
+            setIsEmailValid(false);
+        }
     }
 
     const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
@@ -90,6 +103,7 @@ function Contact() {
                         <input className='container__form__input' placeholder='Name' name='name' type="text" value={inputName} onChange={handleChange} required></input>
                         <input className='container__form__input' placeholder='Subject (Optional)' name='subject' type="text" value={inputSubject} onChange={handleChange}></input>
                     </div>
+                    {!isEmailValid ? <span className='container__form__input--invalidEmail'>The email format is not valid</span> : ''}
                     <input className='container__form__input--email' placeholder='Email' name='email' type="email" value={inputEmail} onChange={handleChange} required></input>
                     <textarea cols={40} rows={6} className="container__form__input--textarea" placeholder='Message' name="message" value={inputMessage} onChange={handleChange} required /*maxLength={50}*/></textarea>
                     <button className='container__form__input--btn'>Contact me</button>
