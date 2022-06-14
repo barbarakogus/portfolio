@@ -5,16 +5,7 @@ import CardPortfolio from '../cardPortfolio/CardPortfolio';
 import { setCurrentPage } from '../../features/portfolioSlice';
 import { useDispatch } from 'react-redux';
 
-//332 205
 const projects: Project[] = [
-    {
-        title: 'My Private Chef',
-        description: 'Salt final project - App to book a chef to prepare meals for you and your family.',
-        technologies: 'React - Redux - TypeScript - MongoDB',
-        img: 'https://storage.googleapis.com/portfolio_bk/img_portfolio/myPrivateChef_home.png',
-        gitLink: 'https://github.com/theAliensAlliance',
-        projectLink: 'https://myprivatechef.herokuapp.com/'
-    },
     {
         title: 'Boardkut',
         description: 'Hackaday Salt project - App to manipulate data about boardgames.',
@@ -32,27 +23,35 @@ const projects: Project[] = [
         projectLink: 'https://boardkut.herokuapp.com/'
     },
     {
-        title: 'Dog Sitter',
-        description: 'My first website. I built it to share my work as a dog sitter and also to practice what I had learned about front end.',
-        technologies: 'HTML - CSS - JavaScript',
-        img: 'https://storage.googleapis.com/portfolio_bk/img_portfolio/dogssiter_home.png',
-        gitLink: 'https://github.com/barbarakogus/dogsitter',
+        title: 'ByteBank',
+        description: 'App to start working with object-oriented.',
+        technologies: 'Android - Kotlin - RecyclerView',
+        img: 'https://storage.googleapis.com/portfolio_bk/img_portfolio/byteBank_mobile_original.png',
+        gitLink: 'https://github.com/barbarakogus/mobile_byteBank',
         projectLink: ''
     },
     {
         title: 'Album finder',
         description: 'An app to find all albums and lyrics from your favorite singer.',
         technologies: 'Android - Kotlin - Retrofit - RecyclerView',
-        img: 'https://storage.googleapis.com/portfolio_bk/img_portfolio/searchAlbums_mobile.png',
+        img: 'https://storage.googleapis.com/portfolio_bk/img_portfolio/searchAlbums_mobile_original.png',
         gitLink: 'https://github.com/barbarakogus/albums-search',
         projectLink: ''
     },
     {
-        title: 'ByteBank',
-        description: 'App to start working with object-oriented.',
-        technologies: 'Android - Kotlin - RecyclerView',
-        img: 'https://storage.googleapis.com/portfolio_bk/img_portfolio/byteBank_mobile.png',
-        gitLink: 'https://github.com/barbarakogus/mobile_byteBank',
+        title: 'My Private Chef',
+        description: 'Salt final project - App to book a chef to prepare meals for you and your family.',
+        technologies: 'React - Redux - TypeScript - MongoDB',
+        img: 'https://storage.googleapis.com/portfolio_bk/img_portfolio/myPrivateChef_home.png',
+        gitLink: 'https://github.com/theAliensAlliance',
+        projectLink: 'https://myprivatechef.herokuapp.com/'
+    },
+    {
+        title: 'Dog Sitter',
+        description: 'My first website. I built it to share my work as a dog sitter and also to practice what I had learned about front end.',
+        technologies: 'HTML - CSS - JavaScript',
+        img: 'https://storage.googleapis.com/portfolio_bk/img_portfolio/dogssiter_home.png',
+        gitLink: 'https://github.com/barbarakogus/dogsitter',
         projectLink: ''
     }
 ]

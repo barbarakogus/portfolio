@@ -1,4 +1,3 @@
-import { isDisabled } from '@testing-library/user-event/dist/utils';
 import './CardPortfolio.css';
 
 interface CardPortfolioProps {
