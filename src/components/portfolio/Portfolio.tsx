@@ -11,7 +11,7 @@ const projects: Project[] = [
         title: 'My Private Chef',
         description: 'Salt final project - App to book a chef to prepare meals for you and your family.',
         technologies: 'React - Redux - TypeScript - MongoDB',
-        img: 'https://storage.googleapis.com/portfolio_bk/images/myPrivateChef.png',
+        img: 'https://storage.googleapis.com/portfolio_bk/img_portfolio/myPrivateChef_home.png',
         gitLink: 'https://github.com/theAliensAlliance',
         projectLink: 'https://myprivatechef.herokuapp.com/'
     },
@@ -19,7 +19,7 @@ const projects: Project[] = [
         title: 'Boardkut',
         description: 'Hackaday Salt project - App to manipulate data about boardgames.',
         technologies: 'React - Redux - Docker - PostGres',
-        img: 'https://storage.googleapis.com/portfolio_bk/images/boardkut.png',
+        img: 'https://storage.googleapis.com/portfolio_bk/img_portfolio/boardkut.png',
         gitLink: 'https://github.com/barbarakogus/boardkut_frontend',
         projectLink: 'https://boardkut.herokuapp.com/'
     },
@@ -27,7 +27,7 @@ const projects: Project[] = [
         title: 'Todo List',
         description: 'An app to add and delete items from a todo list.',
         technologies: 'React - Redux/Toolkit - TypeScript',
-        img: 'https://storage.googleapis.com/portfolio_bk/images/toDoList.png',
+        img: 'https://storage.googleapis.com/portfolio_bk/img_portfolio/react_todoList.png',
         gitLink: '',
         projectLink: 'https://boardkut.herokuapp.com/'
     },
@@ -35,7 +35,7 @@ const projects: Project[] = [
         title: 'Dog Sitter',
         description: 'My first website. I built it to share my work as a dog sitter and also to practice what I had learned about front end.',
         technologies: 'HTML - CSS - JavaScript',
-        img: 'https://storage.googleapis.com/portfolio_bk/images/dogSitter.png',
+        img: 'https://storage.googleapis.com/portfolio_bk/img_portfolio/dogssiter_home.png',
         gitLink: 'https://github.com/barbarakogus/dogsitter',
         projectLink: ''
     },
@@ -43,7 +43,7 @@ const projects: Project[] = [
         title: 'Album finder',
         description: 'An app to find all albums and lyrics from your favorite singer.',
         technologies: 'Android - Kotlin - Retrofit - RecyclerView',
-        img: 'https://storage.googleapis.com/portfolio_bk/images/mobileAlbumFinder.png',
+        img: 'https://storage.googleapis.com/portfolio_bk/img_portfolio/searchAlbums_mobile.png',
         gitLink: 'https://github.com/barbarakogus/albums-search',
         projectLink: ''
     },
@@ -51,7 +51,7 @@ const projects: Project[] = [
         title: 'ByteBank',
         description: 'App to start working with object-oriented.',
         technologies: 'Android - Kotlin - RecyclerView',
-        img: 'https://storage.googleapis.com/portfolio_bk/images/byteBank.png',
+        img: 'https://storage.googleapis.com/portfolio_bk/img_portfolio/byteBank_mobile.png',
         gitLink: 'https://github.com/barbarakogus/mobile_byteBank',
         projectLink: ''
     }

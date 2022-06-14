@@ -12,7 +12,7 @@ function CardPortfolio({ project }: CardPortfolioProps) {
             <h3 className="container__cardPortfolio--title">{project.title}</h3>
             <p className="container__cardPortfolio--description">{project.description}</p>
             <p className="container__cardPortfolio--technologies">{project.technologies}</p>
-            <img className="container__cardPortfolio--img" src={project.img}></img>
+            <img className="container__cardPortfolio--img" src={project.img}></img> 
             <div className="container__cardPortfolio--links">
                 <a className={`cardPortfolio--anchor-btn left ${project.projectLink === '' ? 'isDisabled' : ''}`} target='_blank' href={project.projectLink}>Live</a>
                 <a className={`cardPortfolio--anchor-btn right ${project.gitLink === '' ? 'isDisabled' : ''}`} target='_blank' href={project.gitLink}>GitHub</a>
