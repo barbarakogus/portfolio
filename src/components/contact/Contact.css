@@ -130,7 +130,7 @@ p>span {
     background-color: var(--btn-hover);
 }
 
-.container__form--statusMessage {
+.container__form--emailResultMessage {
     background-color: rgba(36, 36, 36, 0.2);
     box-shadow: 0 0 2.08333rem rgb(0 0 0 / 50%);
     border-radius: 1.6rem;

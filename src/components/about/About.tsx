@@ -31,9 +31,9 @@ function About() {
           <div className='content__about--icon'>
             <img className='about--icon' src="https://img.icons8.com/color/48/000000/javascript--v1.png" />
             <img className='about--icon' src="https://img.icons8.com/color/48/000000/typescript.png" />
-            <img className='about--icon' src="https://img.icons8.com/color/48/000000/nodejs.png" />
+            <img className='about--icon' width={50} src="https://img.icons8.com/color/48/000000/nodejs.png" />
             <img className='about--icon' src="https://img.icons8.com/color/48/000000/react-native.png" />
-            <img className='about--icon' src="https://img.icons8.com/color/48/000000/redux.png" />
+            <img className='about--icon' src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/undefined/external-redux-an-open-source-javascript-library-for-managing-application-state-logo-color-tal-revivo.png"/>
             <img className='about--icon' src="https://img.icons8.com/color/48/000000/kotlin.png" />
             <img className='about--icon' src="https://img.icons8.com/color/48/000000/android-os.png" />
             <img className='about--icon' src="https://img.icons8.com/color/48/000000/mongodb.png" />

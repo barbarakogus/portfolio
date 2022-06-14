@@ -37,7 +37,7 @@ const projects: Project[] = [
         technologies: 'HTML - CSS - JavaScript',
         img: 'https://storage.googleapis.com/portfolio_bk/images/dogSitter.png',
         gitLink: 'https://github.com/barbarakogus/dogsitter',
-        projectLink: 'https://boardkut.herokuapp.com/'
+        projectLink: ''
     },
     {
         title: 'Album finder',
