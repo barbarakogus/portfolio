@@ -26,7 +26,7 @@ function Contact() {
 
     const sendEmail = (event: React.SyntheticEvent) => {
         event.preventDefault();
-
+        
         fetch('http://localhost:3002/email', {
             method: 'POST',
             headers: {
@@ -49,6 +49,7 @@ function Contact() {
             })
             .catch((error) => {
                 setEmailResultMessage('Something went wrong. Please try later or get in touch via Linkedin. Sorry for the inconvenience.');
+                setIsEmailSent(false);
                 console.error(error);
             });
     }

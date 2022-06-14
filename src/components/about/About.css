@@ -50,7 +50,6 @@
 }
 
 .content__about--icon {
-    /* background-color: var(--backgroung--technologies-icons); */
     box-shadow: 0 0 2.08333rem rgb(0 0 0 / 50%);
     border-radius: 70px;
     display: flex;
