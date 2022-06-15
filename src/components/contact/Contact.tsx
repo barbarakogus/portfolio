@@ -12,6 +12,7 @@ function Contact() {
     const [inputMessage, setInputMessage] = useState('');
     const [emailResultMessage, setEmailResultMessage] = useState('');
     const [isEmailSent, setIsEmailSent] = useState(false);
+    const url = 'https://email-service.barbarakogus.com/email';
 
     const dispatch = useDispatch();
 
@@ -27,7 +28,7 @@ function Contact() {
     const sendEmail = (event: React.SyntheticEvent) => {
         event.preventDefault();
         
-        fetch('http://localhost:3002/email', {
+        fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
