@@ -3,7 +3,7 @@
     background-color: var(--backgroung--primary);
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     position: relative;
     height: 100vh;
 }
@@ -14,12 +14,18 @@
     font-size: 3rem;
     line-height: 4rem;
     font-weight: 200;
-    padding-left: 10rem;
+    margin-right: 1.5rem;
 }
 
 .content--text--title {
     color: var(--contrast-area);
     font-weight: 600;
+}
+
+.home--img {
+    width: 350px;
+    box-shadow: 0 0 2.08333rem rgb(0 0 0 / 80%);
+    border-radius: 1000px;
 }
 
 @media screen and (max-width:768px) {

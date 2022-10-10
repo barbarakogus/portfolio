@@ -1,5 +1,5 @@
 import './Home.css';
-import profileImg from '../../assets/img/profile.png';
+import profileImg from '../../assets/img/barbara_portfolio.jpg';
 import { useEffect, useRef } from 'react';
 import useOnScreen from '../../hooks/useOnScreen';
 import { useDispatch } from 'react-redux';
