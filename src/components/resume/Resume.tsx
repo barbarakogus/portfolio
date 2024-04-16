@@ -13,29 +13,39 @@ const resumes: Resume[] = [
         date: '2007 - 2011'
     },
     {
-        title: 'MBA in auditing, expertise and environmental Management',
+        title: 'MBA in auditing, expertise, and environmental Management',
         description: 'IPOG',
         date: '2014 - 2016'
     },
     {
-        title: 'Coordinator of Graphic Editing of real estate Lot',
+        title: 'Coordinator of Graphic Editing of Real Estate Lot',
         description: 'Geomais Geotechnology',
         date: '2013 - 2018'
     },
     {
-        title: 'Front-end carrer',
+        title: 'Front-end career',
         description: 'Alura',
         date: '2019 - 2020'
     },
     {
-        title: 'Developemnt Android',
+        title: 'Development Android',
         description: 'Alura',
         date: '2020 - 2021'
     },
     {
         title: 'Full-stack JavaScript developer',
         description: 'School of applied technology </salt>',
-        date: '2022 - Present'
+        date: '2022 - 2023'
+    },
+    {
+        title: 'Junior full-stack consultant',
+        description: 'Noterat.io',
+        date: '2023 - 2023'
+    },
+    {
+        title: 'Junior front-end developer',
+        description: 'Cling Systems',
+        date: '2023 - Present'
     }
 ]
 
@@ -50,7 +60,7 @@ function Resume() {
         if (isVisible) {
             dispatch(setCurrentPage('resume'))
         }
-    }, [isVisible]);
+    }, [dispatch, isVisible]);
 
     const [screenSize, getDimension] = useState({
         dynamicWidth: window.innerWidth,
@@ -76,7 +86,7 @@ function Resume() {
             <h2 className="container__resume--title">Resume</h2>
             <hr className='container__resume--line'></hr>
             {screenSize.dynamicWidth < 768 ? <TimelineMobile resumes={resumes} refResume={ref} /> : <Timeline resumes={resumes} refResume={ref} />}
-            <a href='https://storage.googleapis.com/portfolio_bk/cv_barbaraKogus_2022.pdf' className='container__resume--btn-dowloadCV' download target='_blank'>Dowload Resume</a>
+            <a href='https://storage.cloud.google.com/portfolio_bk/cv_barbaraKogus_2024.pdf' className='container__resume--btn-dowloadCV' download target='_blank' rel="noreferrer">Dowload Resume</a>
         </div>
     );
 }

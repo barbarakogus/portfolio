@@ -9,7 +9,7 @@ function Timeline({ resumes, refResume }: TimelineProps) {
 
     return (
         <div className='container__resume--timeline'>
-            <img className='container--timeline-arrow' src="https://img.icons8.com/carbon-copy/100/ffffff/chevron-right.png" />
+            <img className='container--timeline-arrow' src="https://img.icons8.com/carbon-copy/100/ffffff/chevron-right.png" alt="" />
             <span ref={refResume} className='container--timeline-start'></span>
             <ul>
                 {resumes.map((resume, key) =>

@@ -114,6 +114,7 @@ p>span {
 }
 
 .container__form__input--btn {
+    align-self: flex-end;
     background-color: var(--contrast-area);
     border: none;
     border-radius: 1.6rem;
@@ -121,9 +122,9 @@ p>span {
     cursor: pointer;
     font-size: 18px;
     margin-top: 1.5rem;
-    padding: .7rem;
+    padding: .7rem 1.5rem;
     transition: 1s all;
-    width: 50%;
+    width: auto;
 }
 
 .container__form__input--btn:hover {
@@ -134,7 +135,7 @@ p>span {
     background-color: rgba(36, 36, 36, 0.2);
     box-shadow: 0 0 2.08333rem rgb(0 0 0 / 50%);
     border-radius: 1.6rem;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 1.6rem;
     padding: 0.8rem;
     margin-top: 1.5rem;
@@ -188,3 +189,21 @@ p>span {
         margin-top: 2rem;
     }
 }
+
+#submit_button.loading::after {
+    animation: spin 0.8s linear infinite;
+    border: 2px solid var(--backgroung--primary);
+    border-radius: 50%;
+    border-top: 2px solid #fff;
+    content: '';
+    display: inline-block;
+    height: 12px;
+    margin-left: 5px;
+    vertical-align: middle;
+    width: 12px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

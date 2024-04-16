@@ -2,7 +2,7 @@
     align-items: center;
     display: flex;
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
 }
 
 .container--timeline-start {
@@ -38,7 +38,7 @@
     display: inline-block;
     line-height: 1.5rem;
     list-style-type: none;
-    width: 160px;
+    width: 120px;
     height: 3px;
     background: #fff;
 }

@@ -23,11 +23,20 @@ function Contact() {
         if (isVisible) {
             dispatch(setCurrentPage('contact'));
         }
-    }, [isVisible]);
+    }, [dispatch, isVisible]);
+
+    const startLoading = () => {
+        var button = document.getElementById('submit_button');
+        button?.classList.add('loading');
+        setTimeout(function() {
+            button?.classList.remove('loading');
+        }, 1000); 
+
+      }
 
     const sendEmail = (event: React.SyntheticEvent) => {
         event.preventDefault();
-        
+        startLoading();
         fetch(url, {
             method: 'POST',
             headers: {
@@ -94,7 +103,7 @@ function Contact() {
                     </div>
                     <input className='container__form__input--email' placeholder='Email' name='email' type="email" value={inputEmail} onChange={handleChange} required></input>
                     <textarea cols={40} rows={6} className="container__form__input--textarea" placeholder='Message' name="message" value={inputMessage} onChange={handleChange} required /*maxLength={50}*/></textarea>
-                    <button className='container__form__input--btn'>Contact me</button>
+                    <button id='submit_button' className='container__form__input--btn'>Contact me</button>
                     {emailResultMessage.length > 1 ? <span className={`container__form--emailResultMessage ${isEmailSent ? 'emailSucceed' : 'emailFailed'} `}>{emailResultMessage}</span> : ''}
                 </form>
             </div>
