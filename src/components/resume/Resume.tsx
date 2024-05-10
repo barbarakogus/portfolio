@@ -38,12 +38,12 @@ const resumes: Resume[] = [
         date: '2022 - 2023'
     },
     {
-        title: 'Junior full-stack consultant',
+        title: 'Front-end consultant',
         description: 'Noterat.io',
         date: '2023 - 2023'
     },
     {
-        title: 'Junior front-end developer',
+        title: 'Front-end developer',
         description: 'Cling Systems',
         date: '2023 - Present'
     }
@@ -86,7 +86,7 @@ function Resume() {
             <h2 className="container__resume--title">Resume</h2>
             <hr className='container__resume--line'></hr>
             {screenSize.dynamicWidth < 768 ? <TimelineMobile resumes={resumes} refResume={ref} /> : <Timeline resumes={resumes} refResume={ref} />}
-            <a href='https://storage.cloud.google.com/portfolio_bk/cv_barbaraKogus_2024.pdf' className='container__resume--btn-dowloadCV' download target='_blank' rel="noreferrer">Dowload Resume</a>
+            <a href='https://storage.googleapis.com/portfolio_bk/cv_barbaraKogus_2024.pdf' className='container__resume--btn-dowloadCV' download target='_blank' rel="noreferrer">Dowload Resume</a>
         </div>
     );
 }
