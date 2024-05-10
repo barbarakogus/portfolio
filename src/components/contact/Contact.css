@@ -1,6 +1,7 @@
 .container__contact {
     background-color: var(--backgroung--primary);
     height: 100vh;
+    min-height: 100vh;
     position: relative;
 }
 
@@ -156,6 +157,7 @@ p>span {
     }
 
     .container__contact--title {
+        padding-top: 7rem;
         width: 85%;
     }
 
