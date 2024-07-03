@@ -9,7 +9,7 @@ function TimelineMobile({ resumes, refResume }: ResumeProps) {
 
     return (
         <div className='container__timelineMobile'>
-            <img className='container--timelineMobile-arrow' src="https://img.icons8.com/carbon-copy/100/ffffff/chevron-right.png" />
+            <img alt='arrow icon' className='container--timelineMobile-arrow' src="https://img.icons8.com/carbon-copy/100/ffffff/chevron-right.png" />
             <span ref={refResume} />
             <ul>
                 {resumes.map((resume, key) =>
