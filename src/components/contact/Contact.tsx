@@ -12,7 +12,8 @@ function Contact() {
     const [inputMessage, setInputMessage] = useState('');
     const [emailResultMessage, setEmailResultMessage] = useState('');
     const [isEmailSent, setIsEmailSent] = useState(false);
-    const url = 'https://email-service.barbarakogus.com/email';
+    const [isLoading, setIsLoading] = useState(false);
+    const url = 'https://email-service.barbarakogus.com/email'; //'http://localhost:4000/email'
 
     const dispatch = useDispatch();
 
@@ -25,18 +26,9 @@ function Contact() {
         }
     }, [dispatch, isVisible]);
 
-    const startLoading = () => {
-        var button = document.getElementById('submit_button');
-        button?.classList.add('loading');
-        setTimeout(function() {
-            button?.classList.remove('loading');
-        }, 1000); 
-
-      }
-
     const sendEmail = (event: React.SyntheticEvent) => {
         event.preventDefault();
-        startLoading();
+        setIsLoading(true)
         fetch(url, {
             method: 'POST',
             headers: {
@@ -54,12 +46,14 @@ function Contact() {
                 setInputSubject('');
                 setInputEmail('');
                 setInputMessage('');
-                setEmailResultMessage('Email successfully sent. Thank you for reaching out. As soon as possible, I will contact you.');
+                setEmailResultMessage('Email successfully sent. Thank you for reaching out. I will contact you as soon as possible.');
                 setIsEmailSent(true);
+                setIsLoading(false)
             })
             .catch((error) => {
                 setEmailResultMessage('Something went wrong. Please try later or get in touch via Linkedin. Sorry for the inconvenience.');
                 setIsEmailSent(false);
+                setIsLoading(false)
                 console.error(error);
             });
     }
@@ -103,8 +97,8 @@ function Contact() {
                     </div>
                     <input className='container__form__input--email' placeholder='Email' name='email' type="email" value={inputEmail} onChange={handleChange} required></input>
                     <textarea cols={40} rows={6} className="container__form__input--textarea" placeholder='Message' name="message" value={inputMessage} onChange={handleChange} required /*maxLength={50}*/></textarea>
-                    <button id='submit_button' className='container__form__input--btn'>Contact me</button>
-                    {emailResultMessage.length > 1 ? <span className={`container__form--emailResultMessage ${isEmailSent ? 'emailSucceed' : 'emailFailed'} `}>{emailResultMessage}</span> : ''}
+                    <button id='submit_button' className={`container__form__input--btn ${isLoading && 'loading'}`}>{!isLoading && 'Contact me'}</button>
+                    {emailResultMessage.length > 1 && <span className={`container__form--emailResultMessage ${isEmailSent ? 'emailSucceed' : 'emailFailed'} `}>{emailResultMessage}</span>}
                 </form>
             </div>
         </div>
