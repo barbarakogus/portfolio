@@ -6,14 +6,18 @@ import { useDispatch } from 'react-redux';
 
 function Contact() {
 
-    const [inputName, setInputName] = useState('');
-    const [inputSubject, setInputSubject] = useState('');
-    const [inputEmail, setInputEmail] = useState('');
-    const [inputMessage, setInputMessage] = useState('');
-    const [emailResultMessage, setEmailResultMessage] = useState('');
-    const [isEmailSent, setIsEmailSent] = useState(false);
+    const [contactForm, setContactForm] = useState({
+        name: '',
+        subject: '',
+        email: '',
+        message: ''
+    });
+    const [sendEmailStatus, setSendEmailStatus] = useState({
+        erroMessage: '',
+        status: false,
+    });
     const [isLoading, setIsLoading] = useState(false);
-    const url = 'https://email-service.barbarakogus.com/email'; //'http://localhost:4000/email'
+    const url = 'https://email-service.barbarakogus.com/email';
 
     const dispatch = useDispatch();
 
@@ -26,58 +30,59 @@ function Contact() {
         }
     }, [dispatch, isVisible]);
 
-    const sendEmail = (event: React.SyntheticEvent) => {
+    const sendEmail = async (event: React.SyntheticEvent) => {
         event.preventDefault();
-        setIsLoading(true)
-        fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                name: inputName,
-                subject: inputSubject,
-                email: inputEmail,
-                message: inputMessage
+        setIsLoading(true);
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: contactForm.name,
+                    subject: contactForm.subject,
+                    email: contactForm.email,
+                    message: contactForm.message
+                })
             })
-        })
-            .then(() => {
-                setInputName('');
-                setInputSubject('');
-                setInputEmail('');
-                setInputMessage('');
-                setEmailResultMessage('Email successfully sent. Thank you for reaching out. I will contact you as soon as possible.');
-                setIsEmailSent(true);
+            if (response.ok) {
+                setContactForm({
+                    name: '',
+                    subject: '',
+                    email: '',
+                    message: ''
+                })
+                setSendEmailStatus({
+                    erroMessage: 'Email successfully sent. Thank you for reaching out. I will contact you as soon as possible.',
+                    status: true
+                })
                 setIsLoading(false)
+            } else {
+                throw new Error('Failed to send email.')
+            }
+        } catch (err) {
+            setSendEmailStatus({
+                erroMessage: 'Something went wrong. Please try later or get in touch via Linkedin. Sorry for the inconvenience.',
+                status: false
             })
-            .catch((error) => {
-                setEmailResultMessage('Something went wrong. Please try later or get in touch via Linkedin. Sorry for the inconvenience.');
-                setIsEmailSent(false);
-                setIsLoading(false)
-                console.error(error);
-            });
+            console.error(err);
+        } finally {
+            setIsLoading(false);
+        }
     }
 
     const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
-        switch (event.target.name) {
-            case 'name':
-                setInputName(event.target.value);
-                setEmailResultMessage('');
-                break;
-            case 'subject':
-                setInputSubject(event.target.value);
-                setEmailResultMessage('');
-                break;
-            case 'email':
-                setInputEmail(event.target.value);
-                setEmailResultMessage('');
-                break;
-            case 'message':
-                setInputMessage(event.target.value);
-                setEmailResultMessage('');
-                break;
-        }
-    }
+        const { name, value } = event.target;
+        setSendEmailStatus({
+            erroMessage: '',
+            status: sendEmailStatus.status
+        });
+        setContactForm((prevForm) => ({
+            ...prevForm,
+            [name]: value 
+        }));
+    };
 
     return (
         <div id='contact' className="container__contact">
@@ -92,13 +97,13 @@ function Contact() {
                 </address>
                 <form className='container__contact__form' onSubmit={(event) => sendEmail(event)}>
                     <div>
-                        <input className='container__form__input' placeholder='Name' name='name' type="text" value={inputName} onChange={handleChange} required></input>
-                        <input className='container__form__input' placeholder='Subject (Optional)' name='subject' type="text" value={inputSubject} onChange={handleChange}></input>
+                        <input className='container__form__input' placeholder='Name' name='name' type="text" value={contactForm.name} onChange={handleChange} required></input>
+                        <input className='container__form__input' placeholder='Subject (Optional)' name='subject' type="text" value={contactForm.subject} onChange={handleChange}></input>
                     </div>
-                    <input className='container__form__input--email' placeholder='Email' name='email' type="email" value={inputEmail} onChange={handleChange} required></input>
-                    <textarea cols={40} rows={6} className="container__form__input--textarea" placeholder='Message' name="message" value={inputMessage} onChange={handleChange} required /*maxLength={50}*/></textarea>
+                    <input className='container__form__input--email' placeholder='Email' name='email' type="email" value={contactForm.email} onChange={handleChange} required></input>
+                    <textarea cols={40} rows={6} className="container__form__input--textarea" placeholder='Message' name="message" value={contactForm.message} onChange={handleChange} required /*maxLength={50}*/></textarea>
                     <button id='submit_button' className={`container__form__input--btn ${isLoading && 'loading'}`}>{!isLoading && 'Contact me'}</button>
-                    {emailResultMessage.length > 1 && <span className={`container__form--emailResultMessage ${isEmailSent ? 'emailSucceed' : 'emailFailed'} `}>{emailResultMessage}</span>}
+                    {sendEmailStatus.erroMessage.length > 1 && <span className={`container__form--emailResultMessage ${sendEmailStatus.status ? 'emailSucceed' : 'emailFailed'} `}>{sendEmailStatus.erroMessage}</span>}
                 </form>
             </div>
         </div>
