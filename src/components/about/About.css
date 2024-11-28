@@ -20,47 +20,52 @@
 
 .container__about--content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    margin: 6.5rem auto;
+    gap: 1.5rem;
+    margin: 2rem auto 2rem auto;
+    width: 80%;
 }
 
 .description__about {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
     color: var(--text-color);
     font-size: 19px;
     font-weight: 300;
     line-height: 2rem;
     margin-right: 3rem;
-    width: 45%;
 }
 
 .contrast {
     color: var(--contrast-area);
 }
 
-.content__about {
-    text-align: center;
-    width: 30%;
+.scroll {
+    /* box-shadow: 0 0 2.08333rem rgb(0 0 0 / 50%); */
+    /* border-radius: 20px; */
+    /* padding-block: 1rem; */
+    overflow: hidden;
 }
 
-.content__about--title {
-    color: var(--contrast-area);
-    font-size: 24px;
-    padding-bottom: 1.5rem;
-}
-
-.content__about--icon {
-    box-shadow: 0 0 2.08333rem rgb(0 0 0 / 50%);
-    border-radius: 70px;
+.scroll__container {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    margin: 0 auto;
-    width: 90%;
+    gap: 5.625rem;
+    width: max-content;
+    animation: scrollInfinito 20s linear infinite;
 }
 
-.about--icon {
-    margin: 1rem 2.2rem;
+@keyframes scrollInfinito {
+    from {
+        /* transform: translateX(0); */
+        translate: 0;
+    }
+
+    to {
+        /* transform: translateX(-100%); */
+        translate: calc(-50% - 5px);
+    }
 }
 
 @media screen and (max-width:768px) {
@@ -68,6 +73,7 @@
         height: 100%;
         padding-bottom: 2rem;
     }
+
     .container__about--title {
         width: 85%;
     }
@@ -90,21 +96,15 @@
         width: 100%;
     }
 
-    .description__about > p {
+    .description__about>p {
         padding: 0rem;
     }
 
-    .content__about {
+    .scroll {
         margin-top: 2.5rem;
-        width: 100%;
     }
 
-    .content__about--icon {
-        justify-content: center;
-        width: 100%;
-    }
-
-    .about--icon {
-        margin: 0.8rem 1.5rem;
+    .scroll__container {
+        gap: 2rem;
     }
 }

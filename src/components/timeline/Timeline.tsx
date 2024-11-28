@@ -2,15 +2,15 @@ import './Timeline.css';
 
 interface TimelineProps {
     resumes: Resume[]
-    refResume: React.MutableRefObject<HTMLDivElement>
+    // refResume: React.MutableRefObject<HTMLDivElement>
 }
 
-function Timeline({ resumes, refResume }: TimelineProps) {
+function Timeline({ resumes }: TimelineProps) {
 
     return (
         <div className='container__resume--timeline'>
             <img className='container--timeline-arrow' src="https://img.icons8.com/carbon-copy/100/ffffff/chevron-right.png" alt="" />
-            <span ref={refResume} className='container--timeline-start'></span>
+            <span className='container--timeline-start'></span>
             <ul>
                 {resumes.map((resume, key) =>
                     <li key={key}>

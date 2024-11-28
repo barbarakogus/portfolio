@@ -1,36 +1,23 @@
-import './Home.css';
-import profileImg from '../../assets/img/barbara_portfolio.jpg';
-import { useEffect, useRef } from 'react';
-import useOnScreen from '../../hooks/useOnScreen';
-import { useDispatch } from 'react-redux';
-import { setCurrentPage } from '../../features/portfolioSlice';
+import "./Home.css";
+import me_group from "../../assets/img/me_group.png";
 
 function Home() {
-
-    const dispatch = useDispatch();
-
-    const ref = useRef() as React.MutableRefObject<HTMLDivElement>
-    const isVisible = useOnScreen(ref);
-
-    useEffect(() => {
-        if (isVisible) {
-            dispatch(setCurrentPage('home'));
-        }
-    }, [isVisible]);
-
-    return (
-        <div id='home' className="container__home">
-            <section ref={ref} className='container__home--content'>
-                <h1 className='content--text'>Welcome to my website, <br />
-                    I am <span className='content--text--title'>Bárbara Kógus</span> <br />
-                    Full-stack JavaScript developer
-                </h1>
-            </section>
-            <section className='container__home--img'>
-                <img alt='Barbara' className='home--img' src={profileImg} />
-            </section>
-        </div>
-    );
+  return (
+    <div className="container">
+      <div className="container__home">
+        <section className="container__home--content">
+          <h1 className="content--text">
+            Welcome to my website, <br />I am{" "}
+            <span className="content--text--title">Bárbara Kógus</span> <br />
+            Full-stack JavaScript developer
+          </h1>
+        </section>
+        <section className="container__home--image">
+          <img alt="Barbara" className="home--img" src={me_group} />
+        </section>
+      </div>
+    </div>
+  );
 }
 
 export default Home;

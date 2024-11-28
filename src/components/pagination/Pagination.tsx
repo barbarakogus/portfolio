@@ -1,22 +1,35 @@
-import './Pagination.css';
-import { useAppSelector } from '../../features/store';
+import { NavigationLink } from "../../App";
+import "./Pagination.css";
 
-function Pagination() {
+type Pagination = {
+  activeSection: NavigationLink;
+  onNavigate: (section: NavigationLink) => void;
+  links: NavigationLink[];
+};
 
-    //decomposicao
-    const { currentPage } = useAppSelector(state => state.portfolioReducer);
-
-    return (
-        <nav className="container__pagination">
-            <ul>
-                <a href='#home'><li className={`pagination__list--item ${currentPage === 'home' ? 'active' : ''}`}></li></a>
-                <a href='#about'><li className={`pagination__list--item ${currentPage === 'about' ? 'active' : ''}`}></li></a>
-                <a href='#resume'><li className={`pagination__list--item ${currentPage === 'resume' ? 'active' : ''}`}></li></a>
-                <a href='#portfolio'><li className={`pagination__list--item ${currentPage === 'portfolio' ? 'active' : ''}`}></li></a>
-                <a href='#contact'><li className={`pagination__list--item ${currentPage === 'contact' ? 'active' : ''}`}></li></a>
-            </ul>
-        </nav>
-    );
+function Pagination({ activeSection, onNavigate, links }: Pagination) {
+  return (
+    <nav className="container__pagination">
+      <ul>
+        {links.map((link, index) => (
+          <a
+            key={`${link}-${index}`}
+            href={`#${link}`}
+            onClick={(e) => {
+              e.preventDefault();
+              onNavigate(link);
+            }}
+          >
+            <li
+              className={`pagination__list--item ${
+                activeSection === link ? "active" : ""
+              }`}
+            ></li>
+          </a>
+        ))}
+      </ul>
+    </nav>
+  );
 }
 
 export default Pagination;
