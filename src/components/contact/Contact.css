@@ -190,6 +190,10 @@ p>span {
         height: 5.7rem;
         margin-top: 2rem;
     }
+
+    .container__form__input--btn {
+        width: 100%;
+    }
 }
 
 #submit_button.loading::after {

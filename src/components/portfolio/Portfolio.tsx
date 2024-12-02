@@ -16,7 +16,7 @@ const projects: Project[] = [
         technologies: 'React - Redux - Docker - PostGres',
         img: 'https://storage.googleapis.com/portfolio_bk/img_portfolio/boardkut.png',
         gitLink: 'https://github.com/barbarakogus/boardkut_frontend',
-        projectLink: 'https://boardkut.herokuapp.com/'
+        projectLink: 'https://boardkut.vercel.app/'
     },
     {
         title: 'Todo List',
@@ -48,7 +48,7 @@ const projects: Project[] = [
         technologies: 'React - Redux - TypeScript - MongoDB',
         img: 'https://storage.googleapis.com/portfolio_bk/img_portfolio/myPrivateChef_home.png',
         gitLink: 'https://github.com/theAliensAlliance',
-        projectLink: 'https://myprivatechef.herokuapp.com/'
+        projectLink: ''
     },
     {
         title: 'Dog Sitter',
