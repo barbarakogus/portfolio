@@ -62,6 +62,7 @@
 
 .isDisabled {
     pointer-events: none;
+    opacity: 60%;
 }
 
 .cardPortfolio--anchor-btn:hover {

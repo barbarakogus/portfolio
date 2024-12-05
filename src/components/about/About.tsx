@@ -62,6 +62,12 @@ const icons = [
     width: "48",
     height: "48",
   },
+  {
+    src: "https://img.icons8.com/fluency/48/supabase.png",
+    alt: "Supabase",
+    width: "48",
+    height: "48",
+  },
 ];
 
 function About() {

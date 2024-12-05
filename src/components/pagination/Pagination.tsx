@@ -1,13 +1,13 @@
 import { NavigationLink } from "../../App";
 import "./Pagination.css";
 
-type Pagination = {
+type PaginationProps = {
   activeSection: NavigationLink;
   onNavigate: (section: NavigationLink) => void;
   links: NavigationLink[];
 };
 
-function Pagination({ activeSection, onNavigate, links }: Pagination) {
+function Pagination({ activeSection, onNavigate, links }: PaginationProps) {
   return (
     <nav className="container__pagination">
       <ul>

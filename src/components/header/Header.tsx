@@ -29,8 +29,16 @@ function Header({ onNavigate, activeSection, links }: Header) {
     };
   }, [screenSize]);
 
+  const isBgPrimery =
+    activeSection === "home" ||
+    activeSection === "resume" ||
+    activeSection === "contact";
+
   return (
-    <div className="header">
+    <div
+      className="header"
+      style={{ backgroundColor: isBgPrimery ? "#3a3d41" : "#74757b" }}
+    >
       <h1 className="hearder--title">Bárbara Kógus</h1>
       {screenSize.dynamicWidth < 768 ? (
         <BurguerMenu />
