@@ -13,7 +13,7 @@ const projects: Project[] = [
   },
   {
     title: "Bioprice",
-    description: "Freelance project - App to analyze data related to drug prices based on commercial transactions.",
+    description: "Freelance project - App to analyze data related to medicine prices based on commercial transactions.",
     technologies: "React - TypeScript - Styled-components",
     img: "https://storage.googleapis.com/portfolio_bk/img_portfolio/bioprice.png",
     gitLink: "",
