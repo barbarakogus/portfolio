@@ -9,7 +9,8 @@ const projects: Project[] = [
     technologies: "Next.js - Tailwind - TypeScript - React flow",
     img: "https://storage.googleapis.com/portfolio_bk/img_portfolio/karta-app.png",
     gitLink: "https://github.com/KartaRocky/karta",
-    projectLink: "https://karta.barbarakogus.com/",
+    projectLink: "",
+    // projectLink: "https://karta.barbarakogus.com/",
   },
   {
     title: "Bioprice",
@@ -34,7 +35,8 @@ const projects: Project[] = [
     technologies: "React - Redux - Docker - PostGres",
     img: "https://storage.googleapis.com/portfolio_bk/img_portfolio/boardkut.png",
     gitLink: "https://github.com/barbarakogus/boardkut_frontend",
-    projectLink: "https://boardkut.vercel.app/",
+    projectLink: "",
+    // projectLink: "https://boardkut.vercel.app/",
   },
   {
     title: "Todo List",

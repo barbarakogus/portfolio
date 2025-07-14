@@ -1,4 +1,4 @@
-FROM node:16.11.0-alpine as build
+FROM node:16.11.0-alpine AS build
 
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
@@ -11,7 +11,7 @@ COPY . /app
 RUN npm run build
 
 # ---
-FROM fholzer/nginx-brotli:latest
+FROM nginx:1.29.0-alpine
  
 WORKDIR /etc/nginx
 ADD docker/nginx.conf /etc/nginx/nginx.conf
